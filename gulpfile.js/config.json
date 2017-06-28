@@ -1,0 +1,64 @@
+{
+  "root": {
+    "src": "./assets",
+    "dest": "./dist"
+  },
+
+  "tasks": {
+    "browserSync": {
+      "notify": false
+    },
+
+    "js": {
+      "src": "scripts",
+      "dest": "scripts",
+      "extractSharedJs": true,
+      "entries": {
+        "cmoa": ["./themes/cmoa/main.js"]
+      },
+      "extensions": ["js"]
+    },
+
+    "css": {
+      "src": "styles",
+      "dest": "styles",
+      "autoprefixer": {
+        "browsers": ["last 3 version"]
+      },
+      "sass": {
+        "indentedSyntax": true
+      },
+      "extensions": ["sass", "scss", "css"]
+    },
+
+    "images": {
+      "src": "images",
+      "dest": "images",
+      "extensions": ["jpg", "png", "gif"]
+    },
+
+    "svg": {
+      "src": "images",
+      "dest": "images",
+      "extensions": ["svg"]
+    },
+
+    "fonts": {
+      "src": "fonts",
+      "dest": "fonts",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+
+    "iconFont": {
+      "src": "icons",
+      "dest": "fonts",
+      "sassDest": "utility",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+
+    "bower": {
+      "src": "./bower_components",
+      "dest": "bower_components"
+    }
+  }
+}

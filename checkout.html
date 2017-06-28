@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <script type="text/javascript">
+        var dataLayer = [];
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TT63V54');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Select2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+
+    <!-- Moment -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+
+    <!-- FontAwesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+    <!-- Tag Manager -->
+    <script type="text/javascript" src="https://sales.carnegiemuseums.org/js/gtm.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+  $('select').css('width','+=10');
+  $('select').select2({ width: 'resolve' });
+  */
+
+            $('.error-message').click(function(event) {
+                event.preventDefault();
+                var data = $(this).data();
+                $("[name='" + data['name'] + "']").focus();
+                $('html, body').animate({
+                    scrollTop: ($("[name='" + data['name'] + "']").offset().top)
+                }, 500);
+            });
+
+            if ($("#show-shipping").is(':checked')) {
+                toggleShippingFields(false);
+            } else {
+                toggleShippingFields(true);
+            }
+
+            $("#show-shipping").click(function() {
+                if ($(this).is(':checked')) {
+                    toggleShippingFields(false);
+                } else {
+                    toggleShippingFields(true);
+                }
+            });
+
+            function toggleShippingFields(show) {
+                if (show) {
+                    $(".shipping-fields").show();
+                    $(".shipping-fields").find("input.required").attr("required", "true");
+                } else {
+                    $(".shipping-fields").hide();
+                    $(".shipping-fields").find("input.required").removeAttr('required');
+                }
+            }
+
+        });
+    </script>
+
+    <title>Carnegie Sales | Checkout</title>
+
+    <link rel='stylesheet' href='https://sales.carnegiemuseums.org/static/cmoa/main-1.css' type='text/css' media='all' />
+</head>
+
+<body>
+
+
+    <header>
+        <div id="back">
+            <a href="/cart">&lt;&lt; Cart</a>
+        </div>
+        <!-- Site Defined Header Start -->
+        Not sure what this is...
+        <!-- Site Defined Header End -->
+    </header>
+    <div id='body'>
+        <h1>Checkout</h1>
+        <div class='cart-table'>
+            <h2>Your Cart</h2>
+            <table class='cart'>
+                <tr class='cart-heading'>
+                    <th class='cart-name'>Product</th>
+                    <th class='cart-options'>Options</th>
+                    <th class='cart-qty'>Qty</th>
+                    <th class='cart-price'>Price</th>
+                </tr>
+
+                <tr class='cart-row member-row'>
+                    <td class='cart-name'>
+                        Membership Premium
+                    </td>
+                    <td class='cart-options'>
+
+                    </td>
+                    <td class='cart-qty'>
+                        1
+                    </td>
+                    <td class='cart-price'>
+                        <span class='currency'>$250.00</span>
+                    </td>
+                </tr>
+
+
+                <tr class='cart-row product-row'>
+                    <td class='cart-name'>
+                        Afternoon- Symposium 11/6
+                    </td>
+                    <td class='cart-options'>
+
+                        Member Adult
+
+                    </td>
+                    <td class='cart-qty'>
+                        1
+                    </td>
+
+                    <td class='cart-price'>
+                        <span class='currency'>
+                  $0.00
+              </span>
+                    </td>
+                </tr>
+
+
+
+
+
+                <tr class='cart-total'>
+                    <td colspan="3">
+                        Total
+                    </td>
+                    <td class='cart-total'>
+                        <span class='currency'>$250.00</span>
+                    </td>
+                </tr>
+            </table>
+
+
+
+        </div>
+        <form method="POST" action="https://sales.carnegiemuseums.org/processing">
+            <input type="hidden" name="_token" value="5m8qeQpLaK1cFMKmorXo0kmb8TJe7EgsPVKKcIpu">
+            <div class='contact-information'>
+                <h2>Contact Information</h2>
+
+                <label class='firstname-label required' for='firstname-input'>First Name <span class='required required-identifier'>*</span></label>
+                <input id="firstname-input" type='text' name='firstname' class='firstname-input required' value='' autocomplete="given-name" required tabindex="0"></input>
+
+                <label class='lastname-label required' for='lastname-input'>Last Name <span class='required required-identifier'>*</span></label>
+                <input id="lastname-input" type='text' name='lastname' class='lastname-input required' autocomplete="family-name" value='' required tabindex="0"></input>
+
+                <label class='phone-label required' for='phone-input'>Phone Number <span class='required required-identifier'>*</span></label>
+                <input id="phone-input" type='tel' name='phone' class='phone-input required' placeholder="(412) 555-1212" autocomplete="tel" value='' required tabindex="0"></input>
+
+                <label class='email-label required' for='email-input'>Email <span class='required required-identifier'>*</span></label>
+                <input id="email-input" type='email' name='email' class='email-input required' autocomplete="email" value='' required tabindex="0"></input>
+            </div>
+            <div class='product-information'>
+                <h2>Product Information</h2>
+                <div class='membership-information membership-3'>
+                    <h3 class='membership-title'>Membership Premium</h3>
+                    <div class="comember-section">
+                        <h4 class="section-title">Secondary Member</h4>
+                        <label class="comember-first" for="comember-first-input">First Name</label>
+                        <input id="comember-first-input" type="text" name="membership-comember-first" class="comember-first-input" value="" tabindex="0"></input>
+
+                        <label class="comember-last" for="comember-last-input">Last Name</label>
+                        <input id="comember-last-input" type="text" name="membership-comember-last" class="comember-last-input" value="" tabindex="0"></input>
+                    </div>
+                </div>
+                <div class='billing-address'>
+                    <h2>Billing Address</h2>
+                    <label class='billing-address-label required' for='billing-address-input'>Address <span class='required required-identifier'>*</span></label>
+                    <input id="billing-address-input" type='text' name='billing-address' class='billing-address-input required' autocomplete="billing address-line1" value='' required tabindex="0"></input>
+
+                    <label class='billing-apartment-label' for='billing-apartment-input'>Apartment / Suite / etc.</label>
+                    <input id="billing-apartment-input" type='text' name='billing-apartment' class='billing-apartment-input' autocomplete="billing address-line2" value='' tabindex="0"></input>
+
+                    <label class='billing-city-label required' for='billing-city-input'>City <span class='required required-identifier'>*</span></label>
+                    <input id="billing-city-input" type='text' name='billing-city' class='billing-city-input required' autocomplete="billing address-level2" value='' required tabindex="0"></input>
+
+                    <label class='billing-state-label required' for='billing-state-input'>State <span class='required required-identifier'>*</span></label>
+                    <select id='billing-state-input' name='billing-state' autocomplete="billing address-level1">
+          <option value='AL'>Alabama</option>
+      <option value='AK'>Alaska</option>
+      <option value='AS'>American Samoa</option>
+      <option value='AZ'>Arizona</option>
+      <option value='AR'>Arkansas</option>
+      <option value='CA'>California</option>
+      <option value='CO'>Colorado</option>
+      <option value='CT'>Connecticut</option>
+      <option value='DE'>Delaware</option>
+      <option value='DC'>District Of Columbia</option>
+      <option value='FL'>Florida</option>
+      <option value='GA'>Georgia</option>
+      <option value='GU'>Guam</option>
+      <option value='HI'>Hawaii</option>
+      <option value='ID'>Idaho</option>
+      <option value='IL'>Illinois</option>
+      <option value='IN'>Indiana</option>
+      <option value='IA'>Iowa</option>
+      <option value='KS'>Kansas</option>
+      <option value='KY'>Kentucky</option>
+      <option value='LA'>Louisiana</option>
+      <option value='ME'>Maine</option>
+      <option value='MD'>Maryland</option>
+      <option value='MA'>Massachusetts</option>
+      <option value='MI'>Michigan</option>
+      <option value='MN'>Minnesota</option>
+      <option value='MS'>Mississippi</option>
+      <option value='MO'>Missouri</option>
+      <option value='MT'>Montana</option>
+      <option value='NE'>Nebraska</option>
+      <option value='NV'>Nevada</option>
+      <option value='NH'>New Hampshire</option>
+      <option value='NJ'>New Jersey</option>
+      <option value='NM'>New Mexico</option>
+      <option value='NY'>New York</option>
+      <option value='NC'>North Carolina</option>
+      <option value='ND'>North Dakota</option>
+      <option value='MP'>Northern Mariana Islands</option>
+      <option value='OH'>Ohio</option>
+      <option value='OK'>Oklahoma</option>
+      <option value='OR'>Oregon</option>
+      <option value='PA' selected>Pennsylvania</option>
+      <option value='PR'>Puerto Rico</option>
+      <option value='RI'>Rhode Island</option>
+      <option value='SC'>South Carolina</option>
+      <option value='SD'>South Dakota</option>
+      <option value='TN'>Tennessee</option>
+      <option value='TX'>Texas</option>
+      <option value='UM'>United States Minor Outlying Islands</option>
+      <option value='UT'>Utah</option>
+      <option value='VT'>Vermont</option>
+      <option value='VI'>Virgin Islands</option>
+      <option value='VA'>Virginia</option>
+      <option value='WA'>Washington</option>
+      <option value='WV'>West Virginia</option>
+      <option value='WI'>Wisconsin</option>
+      <option value='WY'>Wyoming</option>
+      <option value='XX'>Other (non-US)</option>
+
+    </select>
+
+                    <label class='billing-zip-label required' for='billing-zip-input'>Zip/Postal Code <span class='required required-identifier'>*</span></label>
+                    <input id="billing-zip-input" type='text' name='billing-zip' class='billing-zip-input required' autocomplete="billing postal-code" value='' required tabindex="0"></input>
+                </div>
+                <div class='payment-information'>
+                    <h2>Payment</h2>
+                    <label class='cc-name-label required' for='cc-name-input'>Cardholder Name<span class='required required-identifier'>*</span></label>
+                    <input id="cc-name-input" type='text' name='cc-name' class='credit-name-input required' autocomplete="cc-name" required tabindex="0"></input>
+
+                    <label class='credit-no-label required' for='credit-no-input'>Credit Card Number <span class='required required-identifier'>*</span></label>
+                    <input id="credit-no-input" type='text' name='cc-number' class='credit-no-input required' autocomplete="cc-number" required tabindex="0"></input>
+
+                    <div class='cc-icons'>
+                        <span aria-label="We accept Visa, Mastercard, and American Express">
+        <i class="fa fa-cc-visa" aria-hidden="true"></i>
+        <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+        <i class="fa fa-cc-amex" aria-hidden="true"></i>
+      </span>
+                    </div>
+
+                    <label class='cvv-label required' for='cvv-input'>CVV <span class='required required-identifier'>*</span></label>
+                    <input id="cvv-input" type='text' name='cc-cvv' class='cvv-input required' autocomplete="cc-csc" required tabindex="0"></input>
+
+                    <div class='cc-exp'>
+                        <label class='exp-month-label required' for='exp-month-input'>Exp Month <span class='required required-identifier'>*</span></label>
+                        <select id='exp-month-input' name='cc-exp-month' autocomplete="cc-exp-month">
+            <option value='1' selected>January</option>
+    <option value='2'>February</option>
+    <option value='3'>March</option>
+    <option value='4'>April</option>
+    <option value='5'>May</option>
+    <option value='6'>June</option>
+    <option value='7'>July</option>
+    <option value='8'>August</option>
+    <option value='9'>September</option>
+    <option value='10'>October</option>
+    <option value='11'>November</option>
+    <option value='12'>December</option>
+
+      </select>
+                        <label class='exp-year-label required' for='exp-year-input'>Exp Year <span class='required required-identifier'>*</span></label>
+                        <select id='exp-year-input' name='cc-exp-year' autocomplete="cc-exp-year">
+              <option value='2037'>2037</option>
+          <option value='2036'>2036</option>
+          <option value='2035'>2035</option>
+          <option value='2034'>2034</option>
+          <option value='2033'>2033</option>
+          <option value='2032'>2032</option>
+          <option value='2031'>2031</option>
+          <option value='2030'>2030</option>
+          <option value='2029'>2029</option>
+          <option value='2028'>2028</option>
+          <option value='2027'>2027</option>
+          <option value='2026'>2026</option>
+          <option value='2025'>2025</option>
+          <option value='2024'>2024</option>
+          <option value='2023'>2023</option>
+          <option value='2022'>2022</option>
+          <option value='2021'>2021</option>
+          <option value='2020'>2020</option>
+          <option value='2019'>2019</option>
+          <option value='2018'>2018</option>
+          <option value='2017'selected>2017</option>
+          </select>
+                    </div>
+                </div>
+                <div class='checkout-buttons'>
+                    <button type='submit' name='complete-purchase' value='Clicked'>Complete Purchase</button>
+                </div>
+        </form>
+
+        </div>
+        <footer>
+            <!-- Site Defined Footer Start -->
+            <div class="container-full">
+
+                <footer class="main-footer" id="main-footer" role="contentinfo">
+                    <div class="container-full">
+                        <p>Footer goes here...</p>
+                    </div>
+                    <p class="legal">
+                        <small>© 2017 Carnegie Museum of Art, Carnegie Institute<a href="/about/terms-of-use/">Terms of Use</a><a href="http://www.carnegiemuseums.org/interior.php?pageID=100">Privacy Policy</a></small>
+                    </p>
+                </footer>
+
+            </div>
+
+            <script type="text/javascript">
+                (function(i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function() {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+                ga('create', 'UA-1213892-1', 'auto');
+                ga('send', 'pageview');
+
+                ga('create', 'UA-65401320-1', 'auto', {
+                    'name': 'unified'
+                });
+                ga('unified.send', 'pageview');
+            </script>
+
+            <script type="text/javascript">
+                /* <![CDATA[ */
+                var google_conversion_id = 975549556;
+                var google_custom_params = window.google_tag_params;
+                var google_remarketing_only = true;
+                /* ]]> */
+            </script>
+            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+            </script>
+            <noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/975549556/?value=0&guid=ON&script=0"/>
+  </div>
+</noscript>
+            <!-- Site Defined Footer End -->
+        </footer>
+</body>
+
+</html>
