@@ -29,30 +29,9 @@
 
 // SHARED MODULES
 @import "modules/global";
-@import "modules/hero";
-@import "modules/tabs";
-@import "modules/calendar-widget";
-@import "modules/datepicker-widget";
-@import "modules/horizontal-callout";
-@import "modules/vertical-callout";
-@import "modules/chip-callout";
-@import "modules/bottom-callout";
-@import "modules/divided-columns";
-@import "modules/sidebar";
-@import "modules/project";
-@import "modules/category-tag";
-@import "modules/embed";
-@import "modules/related";
 
 // PAGE MODULES
-@import "pages/home";
-@import "pages/internal";
-@import "pages/calendar-of-events";
-@import "pages/exhibitions";
-@import "pages/event-archive";
-@import "pages/art";
-@import "pages/programs";
-@import "pages/search";
+@import "pages/ecommerce";
 
 // THEMES
 @import "themes/ie";
