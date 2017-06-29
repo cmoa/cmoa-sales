@@ -1,0 +1,42 @@
+#body {
+  @extend .container;
+  padding-top: $large-spacing;
+}
+
+#back {
+  display: none;
+}
+
+input {
+  max-width:20%;
+}
+
+button {
+  @extend .btn;
+  margin-bottom: $small-spacing;
+}
+
+.apply-special > label {
+  text-transform: capitalize;
+}
+
+.add-membership {
+
+  label {
+    text-align: left;
+    position: relative;
+    top:1em;
+    left:1.5em;
+  }
+
+  p {
+    height:1em;
+  }
+}
+
+.cart-table,
+.apply-special,
+.member-login,
+.member-benefits {
+  margin-bottom: $base-spacing;
+}
