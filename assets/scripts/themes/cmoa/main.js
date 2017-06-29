@@ -10,7 +10,7 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
- require('../../array_polyfill');
+require('../../array_polyfill');
 
 (function($) {
 
