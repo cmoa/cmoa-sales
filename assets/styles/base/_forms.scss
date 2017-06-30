@@ -33,14 +33,17 @@ form label {
   user-select: none;
 }
 
-
-// form input.has-value + label {
-//   opacity: 0;
-// }
-//
-// form input:focus + label {
-//   opacity: 0;
-// }
+.contact-information,
+.product-information {
+  input[type=tel],
+  input[type=email],
+  input[type=text] {
+    width: 50%;
+    @include media($small) {
+      width: 100%
+    }
+  }
+}
 
 
 input,
@@ -62,10 +65,7 @@ select[multiple] {
   margin-bottom: $small-spacing;
   padding: $base-spacing / 4;
   transition: box-shadow .2s;
-  width: 50%;
-  @include media($small) {
-    width: 100%
-  }
+
   &:hover {
   box-shadow: 0 0 0 1px $red;
   }

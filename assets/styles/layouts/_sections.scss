@@ -3,10 +3,9 @@
  [class^=section] {
   @include clearfix;
   position: relative;
-  padding: $large-spacing 0;
+  padding: $small-spacing 0;
   background:  $base-background-color;
   z-index: 1;
-
   @include media($small) {
     padding: $small-spacing 0;
   }
