@@ -1,68 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
-    <script type="text/javascript">
-        var dataLayer = [];
-    </script>
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-TT63V54');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-    <!-- Select2 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
-
-    <!-- Moment -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
-
-    <!-- FontAwesome -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-
-    <!-- Tag Manager -->
-    <script type="text/javascript" src="https://sales.carnegiemuseums.org/js/gtm.js"></script>
-
-    <title>Carnegie Sales | Cart</title>
-
-    <link rel='stylesheet' href='http://localhost:3000/dist/styles/main.css' type='text/css' media='all' />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript">
+    var dataLayer = [];
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js"
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-TT63V54");
+  </script>
+  <!-- End Google Tag Manager -->
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Select2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+  <!-- Moment -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+  <!-- FontAwesome -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <!-- Tag Manager -->
+  <script type="text/javascript" src="https://sales.carnegiemuseums.org/js/gtm.js"></script>
+  <title>Carnegie Sales | Cart</title>
+  <link rel='stylesheet' href='http://localhost:3000/dist/styles/main.css' type='text/css' media='all' />
 </head>
 
 <body>
-
-    <header>
-        <div id="back">
-            <a class="back-link exit" target="_blank" href="http://cmoa.dev/widget-page/">&lt;&lt; Back</a>
-        </div>
-        <!-- Site Defined Header Start -->
-        <header class="header-main">
-          <!-- home nav -->
-
-          <nav class="nav-home" role='navigation' aria-label="Home">
-            <span class="logo-l">
+  <header>
+    <div id="back">
+      <a class="back-link exit" target="_blank" href="http://cmoa.dev/widget-page/">&lt;&lt; Back</a>
+    </div>
+    <!-- Site Defined Header Start -->
+    <header class="header-main">
+      <!-- home nav -->
+      <nav class="nav-home" role='navigation' aria-label="Home">
+        <span class="logo-l">
               <svg aria-labelledby="logo-title" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
                 <title id="logo-title"> Carnegie Museum of Art Logo</title>
                 <desc>The Carnegie Museum of Art bracket logo with wordmark</desc>
@@ -72,240 +58,259 @@
                 Carnegie Museum of Art
               </a>
             </span>
-            <a href="/" title="Carnegie Museum of Art: Home" class="logo-m">
-              <svg aria-labelledby="wm2-title" viewBox="0 0 281 49" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+        <a href="/" title="Carnegie Museum of Art: Home" class="logo-m">
+          <svg aria-labelledby="wm2-title" viewBox="0 0 281 49" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
                 <title id="wm2-title">Carnegie Museum of Art Wordmark</title>
                 <desc>The Carnegie Museum of Art 2 line wordmark</desc>
                 <clipPath><path d="M.473.516h280.34v48.422H.473z"/></clipPath><g clip-path="url(#a)" fill="#231f20" fill-rule="nonzero"><path d="M196.32 1.055v13.2c0 3.096-1.82 5.66-7.478 5.66-5.655 0-7.472-2.564-7.472-5.66v-13.2h3.025v12.953c0 2.062 1.105 3.235 4.447 3.235 3.346 0 4.452-1.173 4.452-3.235V1.055h3.025zM208.56 19.914c-1.924 0-4.555-.394-6.37-1.106l.423-2.383c1.96.57 4.166.89 5.982.89 3.097 0 3.7-.532 3.7-2.487 0-2.14 0-2.247-4.237-3.347-5.41-1.423-5.654-2.348-5.654-5.838 0-3.737 1.704-4.944 6.832-4.944 1.565 0 3.95.245 5.66.676l-.25 2.487c-1.602-.318-3.915-.563-5.375-.563-3.38 0-3.843.317-3.843 2.452 0 2.062.036 2.17 4.162 3.31 5.443 1.458 5.73 2.17 5.73 5.695 0 3.45-1.033 5.16-6.76 5.16M221.19 1.055h12.278l-.3 2.635h-8.952v5.195h6.563v2.63h-6.564v5.41h9.292v2.635H221.19V1.055zM254.148 1.055v13.2c0 3.096-1.818 5.66-7.476 5.66-5.66 0-7.472-2.564-7.472-5.66v-13.2h3.025v12.953c0 2.062 1.1 3.235 4.447 3.235s4.45-1.173 4.45-3.235V1.055h3.026zM279.454 1.23h-3.593l-5.552 15.35-5.552-15.35h-3.593l-1.36 18.505h2.954l1.002-14.09 5.058 14.09h3.012l5.025-14.09 1.006 14.09h2.954l-1.36-18.505zM174.36 1.23h-3.593l-5.554 15.35-5.55-15.35h-3.595l-1.36 18.505h2.952l1.004-14.09 5.06 14.09h3.016l5.024-14.09 1.002 14.09h2.953L174.36 1.23zM7.775 17.27c1.438 0 3.667-.18 5.284-.468l.252 2.553c-1.98.433-3.922.577-5.575.577-5.322 0-7.264-1.87-7.264-5.683V6.195c0-3.81 1.942-5.68 7.264-5.68 1.653 0 3.595.143 5.575.575l-.253 2.552c-1.618-.286-3.847-.465-5.285-.465-3.057 0-4.245.718-4.245 3.235v7.623c0 2.517 1.188 3.235 4.245 3.235M26.243 3.14l-3.38 9.778h6.76l-3.38-9.778zm8.808 16.432h-3.056L30.412 15.4h-8.375l-1.548 4.172H17.43l6.94-18.7h3.74l6.94 18.7zM42.08 10.798h5.498c2.124 0 2.625-.717 2.625-2.408V5.944c0-1.69-.5-2.41-2.625-2.41h-5.5V10.8zm5.138 2.592h-5.14v6.18h-3.056V.875H47.4c4.53 0 5.86 1.834 5.86 4.785v2.944c0 2.157-.72 3.703-2.84 4.386l4.423 6.58H51.39l-4.172-6.18zM63.137 4.578v14.994h-2.912V.875h3.845l8.773 14.993V.875h2.912v18.697H71.91L63.137 4.578zM82.23.874h12.404l-.725 2.66h-8.625v5.25h6.44v2.66h-6.44v5.47h9.384v2.658H82.23V.874zM119.627.873h3.052V19.57h-3.053zM129.333.874h12.406l-.73 2.66h-8.62v5.25h6.44v2.66h-6.44v5.47h9.383v2.658h-12.44V.874zM108.07 10.21v2.898h2.53v3.805a20.45 20.45 0 0 1-3.846.357c-3.308 0-4.066-.972-4.066-3.27V6.485c0-2.59.973-3.272 4.206-3.272 1.656 0 3.815.144 5.79.466l.29-2.587c-1.8-.396-3.92-.574-5.865-.574-5.43 0-7.476 1.654-7.476 5.643v8.163c0 3.667 1.76 5.61 7.08 5.61 1.798 0 4.712-.29 6.8-.935V10.21h-5.445zM49.942 41.63h4.063l-2.05-7.438-2.013 7.44zm5.25 4.14h-6.437l-.788 2.798h-5.213l5.93-18.69h6.542l5.97 18.69h-5.212l-.792-2.798zM73.382 34.155h-3.448v5.25h3.448c1.333 0 1.836-.54 1.836-1.62v-2.087c0-1.044-.503-1.543-1.836-1.543m-.355 9.418h-3.093v4.995h-5.32v-18.69h8.914c5.214 0 6.868 2.01 6.868 5.57v2.52c0 2.157-.615 3.344-2.23 4.492l4.1 6.108h-5.93l-3.31-4.995zM93.815 48.567H88.5v-14.09h-4.986v-4.6h15.274v4.6h-4.973v14.09zM8.15 32.277c-3.332 0-4.584 1.146-4.584 3.37v7.234c0 2.222 1.252 3.37 4.585 3.37 3.298 0 4.587-1.148 4.587-3.37V35.65c0-2.225-1.29-3.37-4.586-3.37m7.63 10.713c0 3.187-1.863 5.948-7.63 5.948-5.768 0-7.63-2.76-7.63-5.947v-7.45c0-3.192 1.862-5.95 7.63-5.95 5.767 0 7.63 2.758 7.63 5.95v7.45zM21.618 48.58V29.95h12.507l-.323 2.65h-9.137v5.695h6.737v2.65h-6.737v7.634h-3.047z"/></g>
               </svg>
-            </a>
-            <a href="/" title="Carnegie Museum of Art: Home" class="logo-s">
-              <svg role="image" viewBox="0 0 410 21" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+        </a>
+        <a href="/" title="Carnegie Museum of Art: Home" class="logo-s">
+          <svg role="image" viewBox="0 0 410 21" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
                 <title>Carnegie Museum of Art Wordmark</title>
                 <desc>The Carnegie Museum of Art 1 line wordmark</desc>
                 <clipPath><path d="M.127.435h409.066V20.75H.127z"/></clipPath><g clip-path="url(#a)" fill="#231f20" fill-rule="nonzero"><path d="M204.96 1v13.805c0 3.238-1.9 5.92-7.818 5.92-5.917 0-7.815-2.682-7.815-5.92V1h3.162v13.546c0 2.157 1.156 3.384 4.652 3.384 3.498 0 4.655-1.227 4.655-3.384V1h3.164zM217.764 20.724c-2.012 0-4.765-.412-6.665-1.157l.444-2.494c2.05.6 4.357.932 6.257.932 3.24 0 3.87-.557 3.87-2.602 0-2.236 0-2.35-4.43-3.5-5.658-1.487-5.914-2.457-5.914-6.106 0-3.908 1.78-5.172 7.145-5.172 1.637 0 4.133.257 5.92.706l-.262 2.603c-1.675-.332-4.095-.59-5.62-.59-3.537 0-4.02.333-4.02 2.565 0 2.157.037 2.27 4.353 3.463 5.695 1.527 5.995 2.27 5.995 5.96 0 3.607-1.08 5.394-7.07 5.394M230.974 1h12.84l-.312 2.757h-9.364V9.19h6.864v2.75h-6.864V17.6h9.72v2.756h-12.884V1zM265.444 1v13.805c0 3.238-1.9 5.92-7.82 5.92s-7.815-2.682-7.815-5.92V1h3.163v13.546c0 2.157 1.15 3.384 4.652 3.384 3.5 0 4.656-1.227 4.656-3.384V1h3.164zM291.91 1.182h-3.756l-5.808 16.056-5.807-16.056h-3.76l-1.42 19.355h3.088L275.495 5.8l5.293 14.737h3.15L289.192 5.8l1.054 14.737h3.087L291.91 1.182zM181.993 1.182h-3.757l-5.808 16.056-5.807-16.056h-3.757l-1.422 19.355h3.088l1.05-14.737 5.292 14.737h3.155L179.28 5.8l1.048 14.737h3.09l-1.425-19.355zM358.106 13.108h4.25l-2.145-7.78-2.104 7.78zm5.49 4.33h-6.732l-.826 2.925h-5.45l6.2-19.548h6.844l6.244 19.548h-5.45l-.83-2.926zM382.62 5.29h-3.604v5.49h3.605c1.394 0 1.923-.563 1.923-1.696v-2.18c0-1.09-.53-1.615-1.922-1.615m-.37 9.85h-3.234v5.222h-5.566V.814h9.324c5.453 0 7.182 2.106 7.182 5.827v2.635c0 2.26-.64 3.5-2.332 4.7l4.29 6.387h-6.205l-3.46-5.223zM403.993 20.363h-5.563V5.626h-5.21V.816h15.973v4.81h-5.2v14.737zM7.764 17.958c1.504 0 3.836-.187 5.526-.49l.265 2.67c-2.07.454-4.1.604-5.83.604-5.567 0-7.598-1.956-7.598-5.943V6.376C.127 2.39 2.157.435 7.724.435c1.73 0 3.76.15 5.83.6l-.264 2.67c-1.69-.298-4.022-.487-5.526-.487-3.197 0-4.44.752-4.44 3.384v7.973c0 2.632 1.243 3.383 4.44 3.383M27.08 3.18l-3.535 10.226h7.07L27.08 3.18zm9.212 17.185h-3.197l-1.655-4.36h-8.76l-1.62 4.36h-3.196L25.124.81h3.91l7.258 19.555zM43.642 11.19h5.752c2.223 0 2.746-.75 2.746-2.52V6.112c0-1.767-.523-2.52-2.746-2.52h-5.752v7.597zm5.376 2.71h-5.376v6.465h-3.197V.81h8.763c4.736 0 6.13 1.918 6.13 5.004v3.08c0 2.256-.754 3.874-2.972 4.588l4.625 6.883h-3.61L49.02 13.9zM65.667 4.684v15.68H62.62V.81h4.023L75.82 16.49V.81h3.045v19.555h-4.022l-9.176-15.68zM85.637.81H98.61l-.76 2.783h-9.02v5.49h6.736v2.783H88.83v5.72h9.816v2.78h-13.01V.81zM124.75.81h3.193v19.556h-3.193zM134.9.81h12.976l-.762 2.783h-9.016v5.49h6.735v2.783h-6.735v5.72h9.813v2.78H134.9V.81zM112.66 10.575v3.03h2.647v3.98a21.37 21.37 0 0 1-4.022.374c-3.46 0-4.252-1.018-4.252-3.422V6.676c0-2.707 1.018-3.42 4.398-3.42 1.735 0 3.99.15 6.06.488l.3-2.71c-1.88-.413-4.098-.598-6.134-.598-5.675 0-7.817 1.73-7.817 5.902v8.538c0 3.836 1.838 5.866 7.405 5.866 1.88 0 4.927-.3 7.108-.976v-9.19h-5.692zM314.397 3.325c-3.486 0-4.796 1.198-4.796 3.526v7.566c0 2.323 1.31 3.524 4.797 3.524 3.448 0 4.797-1.2 4.797-3.524V6.85c0-2.327-1.35-3.525-4.797-3.525m7.98 11.205c0 3.334-1.948 6.22-7.98 6.22-6.035 0-7.982-2.886-7.982-6.22V6.737c0-3.34 1.947-6.223 7.982-6.223 6.032 0 7.98 2.884 7.98 6.223v7.793zM328.482 20.375V.89h13.082l-.34 2.773h-9.556V9.62h7.048v2.77h-7.048v7.985h-3.186z"/></g>
               </svg>
-            </a>
-          </nav>
-
-            <!-- global nav primary-->
-            <nav class="nav-container container-full" role='navigation' aria-label="Global navigation">
-              <!-- persistant global nav -->
-              <ul class="nav-global-persistant"  >
-                <li>
-                </li>
-                <li>
-                  <button class="nav-icon nav-icon-hamburger quickview-btn" href="#quickview-nav" aria-label="Menu" Title="Menu" role="button" aria-label="Mobile navigation trigger">
+        </a>
+      </nav>
+      <!-- global nav primary-->
+      <nav class="nav-container container-full" role='navigation' aria-label="Global navigation">
+        <!-- persistant global nav -->
+        <ul class="nav-global-persistant">
+          <li>
+          </li>
+          <li>
+            <button class="nav-icon nav-icon-hamburger quickview-btn" href="#quickview-nav" aria-label="Menu" Title="Menu" role="button" aria-label="Mobile navigation trigger">
                     <i class="icon -hamburger" aria-hidden="true"></i>
                   </button>
-                </li>
+          </li>
+        </ul>
+        <!-- global nav -->
+        <ul id="menu-main-menu" class="nav-global">
+          <li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a href="http://cmoa.org/art/">Art</a></li>
+          <li id="menu-item-146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="http://cmoa.org/visit/">Visit</a></li>
+          <li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="http://cmoa.org/programs/">Programs</a></li>
+          <li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="http://cmoa.org/join-give/">Join &amp; Give</a></li>
+          <li id="menu-item-363" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-363"><a href="http://cmoa.org/about/">About</a></li>
+          <li id="menu-item-168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168"><a href="http://cmoa.org/calendar/">Calendar</a></li>
+        </ul>
+      </nav>
+      </nav>
+      <!-- Begin second nested header tag -->
+      <header class="quickview-container">
+        <div class="quickview quickview-nav" id="quickview-nav">
+          <ul id="menu-quickview-navigation" class="">
+            <li id="menu-item-188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188"><a href="http://cmoa.org/calendar/">Calendar</a></li>
+            <li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-108"><a href="http://cmoa.org/art/">Art</a>
+              <div class="quickview-nav__expand"></div>
+              <ul class="sub-menu">
+                <li id="menu-item-1083" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1083"><a href="http://cmoa.org/exhibitions/">Exhibitions</a></li>
+                <li id="menu-item-1084" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1084"><a href="http://cmoa.org/collection/">Collection</a></li>
+                <li id="menu-item-1085" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1085"><a href="http://cmoa.org/art/publications/">Publications</a></li>
               </ul>
-              <!-- global nav -->
-              <ul id="menu-main-menu" class="nav-global"><li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a href="http://cmoa.org/art/">Art</a></li>
-                <li id="menu-item-146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="http://cmoa.org/visit/">Visit</a></li>
-                <li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="http://cmoa.org/programs/">Programs</a></li>
-                <li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="http://cmoa.org/join-give/">Join &amp; Give</a></li>
-                <li id="menu-item-363" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-363"><a href="http://cmoa.org/about/">About</a></li>
-                <li id="menu-item-168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168"><a href="http://cmoa.org/calendar/">Calendar</a></li>
-                </ul>
-              <!-- visit callout -->
-              <!-- <a href="#visit" class="quickview-btn nav-callout" title="Plan Your Visit" aria-label="Plan Your Visit navigation trigger">
-              </a> -->
-
-              <a href="#visit" class="quickview-btn nav-callout" title="Plan Your Visit" aria-label="Plan Your Visit navigation trigger">
-                <div>
-                  <span>Plan Your Visit</span>
-                  <span itemprop="hoursAvailable" itemtype="http://schema.org/OpeningHoursSpecification" class="open-times"></span>
-                </div>
-                <span class="nav-icon nav-icon-visit">
-                  <i class="icon -visit" aria-hidden="true"></i>
-                </span>
-            </a>
-
-            </nav>
-          </nav>
-        </header>
-        <!-- Site Defined Header End -->
-
-
-
+            </li>
+            <li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-88"><a href="http://cmoa.org/visit/">Visit</a>
+              <div class="quickview-nav__expand"></div>
+              <ul class="sub-menu">
+                <li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-91"><a href="http://cmoa.org/visit/directions-maps-parking/">Directions &amp; Parking</a></li>
+                <li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="http://cmoa.org/visit/amenities/">Amenities</a></li>
+                <li id="menu-item-1096" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1096"><a href="http://cmoa.org/visit/accessibility/">Accessibility</a></li>
+                <li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89"><a href="http://cmoa.org/visit/tours/">Tours</a></li>
+                <li id="menu-item-1103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1103"><a href="http://cmoa.org/calendar/">Calendar</a></li>
+              </ul>
+            </li>
+            <li id="menu-item-107" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-107"><a href="http://cmoa.org/programs/">Programs</a>
+              <div class="quickview-nav__expand"></div>
+              <ul class="sub-menu">
+                <li id="menu-item-1087" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1087"><a href="http://cmoa.org/programs/kids-and-families/">Kids &amp; Families</a></li>
+                <li id="menu-item-1090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1090"><a href="http://cmoa.org/programs/teens/">Teens</a></li>
+                <li id="menu-item-1086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1086"><a href="http://cmoa.org/programs/adults/">Adults</a></li>
+                <li id="menu-item-1089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1089"><a href="http://cmoa.org/programs/teachers/">Teachers</a></li>
+                <li id="menu-item-1088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1088"><a href="http://cmoa.org/programs/schools/">Schools</a></li>
+                <li id="menu-item-1091" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1091"><a href="http://cmoa.org/programs/visitors-with-accessibility-needs/">Programs for Accessibility</a></li>
+              </ul>
+            </li>
+            <li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-106"><a href="http://cmoa.org/join-give/">Join &amp; Give</a>
+              <div class="quickview-nav__expand"></div>
+              <ul class="sub-menu">
+                <li id="menu-item-1102" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1102"><a href="http://www.carnegiemuseums.org/section.php?pageID=40">Membership</a></li>
+                <li id="menu-item-1100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1100"><a href="http://cmoa.org/join-give/sponsorship/">Sponsorship</a></li>
+                <li id="menu-item-1101" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1101"><a href="http://cmoa.org/join-give/volunteer/">Volunteer</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="quickview" id="search">
+          <form class="form-search" action="/" method="get" role="search">
+            <legend class="screen-reader-text">Search form</legend>
+            <fieldset>
+              <input type="text" id="search-field" name="s" value="">
+              <label for="search-field"> Search</label>
+            </fieldset>
+            <button type="submit" class="btn" title="Start search"><i class="icon -search"></i></button>
+          </form>
+        </div>
+      </header>
+      <div class="quickview-overlay"></div>
     </header>
+    <!-- Site Defined Header End -->
+  </header>
+  <div id='body'>
+    <h1>Cart</h1>
+    <div class='cart-table'>
+      <table class='cart'>
+        <tr class='cart-heading'>
+          <th class='cart-name'>Product</th>
+          <th class='cart-options'>Options</th>
+          <th class='cart-qty'>Qty</th>
+          <th class='cart-price'>Price</th>
+        </tr>
+        <tr class='cart-row product-row'>
+          <td class='cart-name'>
+            Afternoon- Symposium 11/6
+          </td>
+          <td class='cart-options'>
+            Adult
+          </td>
+          <td class='cart-qty'>
+            <form action='https://sales.carnegiemuseums.org/cart' method="POST">
+              <input type="hidden" name="_token" value="JF2I4tjdDtrCCvfrBNiRH6AVC9bMVEvK4VP9dsQy">
 
-    <div id='body'>
-        <h1>Cart</h1>
-        <div class='cart-table'>
-            <table class='cart'>
-                <tr class='cart-heading'>
-                    <th class='cart-name'>Product</th>
-                    <th class='cart-options'>Options</th>
-                    <th class='cart-qty'>Qty</th>
-                    <th class='cart-price'>Price</th>
-                </tr>
-                <tr class='cart-row product-row'>
-                    <td class='cart-name'>
-                        Afternoon- Symposium 11/6
-                    </td>
-                    <td class='cart-options'>
-
-                        Adult
-
-                    </td>
-                    <td class='cart-qty'>
-                        <form action='https://sales.carnegiemuseums.org/cart' method="POST">
-                            <input type="hidden" name="_token" value="JF2I4tjdDtrCCvfrBNiRH6AVC9bMVEvK4VP9dsQy">
-
-                            <input name='product-qty' class='product-qty-select' aria-label="Change quantity" type="number" min="0" max="182" value="1"></input>
-                            <input type="hidden" name="cart-item" value="14453"></input>
-                            <button class='cart-update product-update-btn' name='update-cart' value='clicked' type='submit'>Update</button>
-                            <button class='cart-remove product-remove-btn' name='remove-cart' value='clicked' type='submit'>Remove</button>
-                        </form>
-                    </td>
-
-                    <td class='cart-price'>
-                        <span class='currency'>
+              <input name='product-qty' class='product-qty-select' aria-label="Change quantity" type="number" min="0" max="182" value="1"></input>
+              <input type="hidden" name="cart-item" value="14453"></input>
+              <button class='cart-update product-update-btn' name='update-cart' value='clicked' type='submit'>Update</button>
+              <button class='cart-remove product-remove-btn' name='remove-cart' value='clicked' type='submit'>Remove</button>
+            </form>
+          </td>
+          <td class='cart-price'>
+            <span class='currency'>
                   $0.00
               </span>
-                    </td>
-                </tr>
-
-
-
-
-
-                <tr class='cart-total'>
-                    <td colspan="3">
-                        Total
-                    </td>
-                    <td class='cart-total'>
-                        <span class='currency'>$0.00</span>
-                    </td>
-                </tr>
-            </table>
-
-
-
-            <ul class='cart-messages'>
-            </ul>
-        </div>
-
-        <div class='cart-forms'>
-            <form method='POST' action='https://sales.carnegiemuseums.org/cart'>
-                <input type="hidden" name="_token" value="JF2I4tjdDtrCCvfrBNiRH6AVC9bMVEvK4VP9dsQy">
-
-                <div class="apply-special">
-                    <label for="special-code">Promotional code</label>
-                    <input type="text" id="special-code" name="special-code">
-                    <button id="btn-apply-special" type="submit" name="special-applied" value="Clicked">Apply</button>
-                </div>
-            </form>
-
-            <form method='POST' action='https://sales.carnegiemuseums.org/checkout'>
-                <input type="hidden" name="_token" value="JF2I4tjdDtrCCvfrBNiRH6AVC9bMVEvK4VP9dsQy">
-
-                <div class='member-login'>
-                    <h2>Member Login</h2>
-                    <label for="member_number">Member Number</label>
-                    <input id="member_number" type="text" name="member-number">
-                    <button id="btn-member-number" type="submit" name="member-login" value="Clicked">Validate</button>
-                </div>
-                <div class='member-benefits'>
-                    <h2>Become a member and save today...</h2>
-                    <ul>
-                        <li>Discounts on classes, camps, standard Omnimax films, lectures, laser shows, and special events</li>
-                        <li>10% discount on purchases in all museum stores (20% off during Member Shopping Days)</li>
-                        <li>Unlimited general admission for one year to Carnegie Museum of Art, Carnegie Museum of Natural History, The Andy Warhol Museum, and Carnegie Science Center</li>
-                        <li>Access to special online store promotions</li>
-                    </ul>
-                </div>
-                <div class='add-membership'>
-                    <fieldset>
-                        <legend>
-                            <h3>Add a membership</h3></legend>
-                        <p><input id="radio-1" type="radio" name="membership-item" value="1"><label for="radio-1">Membership Individual - <span class='currency'>$75.00</span></label></p>
-                        <p><input id="radio-2" type="radio" name="membership-item" value="2"><label for="radio-2">Membership Dual - <span class='currency'>$100.00</span></label></p>
-                        <p><input id="radio-3" type="radio" name="membership-item" value="3"><label for="radio-3">Membership Premium - <span class='currency'>$250.00</span></label></p>
-                        <p><input id="radio-4" type="radio" name="membership-item" value="4"><label for="radio-4">Membership Family - <span class='currency'>$150.00</span></label></p>
-                    </fieldset>
-                    <button id="btn-member-addtocart" type="submit" name="member-addtocart" value="Clicked">Add Membership</button>
-                </div>
-                <div class='guest-checkout'>
-                    <button id="btn-guest-checkout" type="submit" name="guest-checkout" value="Clicked">Continue as Guest</button>
-                </div>
-            </form>
-        </div>
+          </td>
+        </tr>
+        <tr class='cart-total'>
+          <td colspan="3">
+            Total
+          </td>
+          <td class='cart-total'>
+            <span class='currency'>$0.00</span>
+          </td>
+        </tr>
+      </table>
+      <ul class='cart-messages'>
+      </ul>
     </div>
-    <footer>
-        <!-- Site Defined Footer Start -->
+    <div class='cart-forms'>
+      <form method='POST' action='https://sales.carnegiemuseums.org/cart'>
+        <input type="hidden" name="_token" value="JF2I4tjdDtrCCvfrBNiRH6AVC9bMVEvK4VP9dsQy">
+        <div class="apply-special">
+          <label for="special-code">Promotional code</label>
+          <input type="text" id="special-code" name="special-code">
+          <button id="btn-apply-special" type="submit" name="special-applied" value="Clicked">Apply</button>
+        </div>
+      </form>
+      <form method='POST' action='https://sales.carnegiemuseums.org/checkout'>
+        <input type="hidden" name="_token" value="JF2I4tjdDtrCCvfrBNiRH6AVC9bMVEvK4VP9dsQy">
+        <div class='member-login'>
+          <h2>Member Login</h2>
+          <label for="member_number">Member Number</label>
+          <input id="member_number" type="text" name="member-number">
+          <button id="btn-member-number" type="submit" name="member-login" value="Clicked">Validate</button>
+        </div>
+        <div class='member-benefits'>
+          <h2>Become a member and save today...</h2>
+          <ul>
+            <li>Discounts on classes, camps, standard Omnimax films, lectures, laser shows, and special events</li>
+            <li>10% discount on purchases in all museum stores (20% off during Member Shopping Days)</li>
+            <li>Unlimited general admission for one year to Carnegie Museum of Art, Carnegie Museum of Natural History, The Andy Warhol Museum, and Carnegie Science Center</li>
+            <li>Access to special online store promotions</li>
+          </ul>
+        </div>
+        <div class='add-membership'>
+          <fieldset>
+            <legend>
+              <h3>Add a membership</h3></legend>
+            <p><input id="radio-1" type="radio" name="membership-item" value="1"><label for="radio-1">Membership Individual - <span class='currency'>$75.00</span></label></p>
+            <p><input id="radio-2" type="radio" name="membership-item" value="2"><label for="radio-2">Membership Dual - <span class='currency'>$100.00</span></label></p>
+            <p><input id="radio-3" type="radio" name="membership-item" value="3"><label for="radio-3">Membership Premium - <span class='currency'>$250.00</span></label></p>
+            <p><input id="radio-4" type="radio" name="membership-item" value="4"><label for="radio-4">Membership Family - <span class='currency'>$150.00</span></label></p>
+          </fieldset>
+          <button id="btn-member-addtocart" type="submit" name="member-addtocart" value="Clicked">Add Membership</button>
+        </div>
+        <div class='guest-checkout'>
+          <button id="btn-guest-checkout" type="submit" name="guest-checkout" value="Clicked">Continue as Guest</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <!-- Site Defined Footer Start -->
+    <div class="container-full">
+      <footer class="main-footer" id="main-footer" role="contentinfo">
         <div class="container-full">
-
-            <footer class="main-footer" id="main-footer" role="contentinfo">
-                <div class="container-full">
-
-                  <!-- CMOA footer -->
-
-                        <section class="logo red">
-                          <svg role="image" width="100%" height="100%" viewBox="0 0 202 202" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+          <!-- CMOA footer -->
+          <section class="logo red">
+            <svg role="image" width="100%" height="100%" viewBox="0 0 202 202" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
                     <title>CMOA Logo</title>
                     <desc>The CMOA Logo</desc>
                     <g>
                       <path  d="M0.171,201.606l94.982,0l0,-94.982l-94.982,0l0,94.982ZM17.078,123.531l61.169,0l0,61.168l-61.169,0l0,-61.168Z" style="fill:#231f20;fill-rule:nonzero;"/><path d="M106.596,106.624l0,16.908l78.075,0l0,20.283l-78.075,0l0,57.791l94.982,0l0,-94.982l-94.982,0ZM123.503,160.72l61.169,0l0,23.979l-61.169,0l0,-23.979Z" style="fill:#231f20;fill-rule:nonzero;"/><path d="M184.343,0.199l-30.256,70.37l-30.257,-70.37l-17.234,0l0,94.982l16.908,0l0,-53.141l22.127,53.141l16.911,0l22.128,-53.141l0,53.141l16.909,0l0,-94.982l-17.236,0Z" style="fill:#231f20;fill-rule:nonzero;"/><path d="M0.171,0.199l0,94.982l94.982,0l0,-33.194l-16.907,0l0,16.287l-61.168,0l0,-61.168l61.168,0l0,16.287l16.907,0l0,-33.194l-94.982,0Z" style="fill:#231f20;fill-rule:nonzero;"/>
                   </g>
                   </svg>
-                        </section>
+          </section>
+          <section class="location">
+            <p>
+              <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">
+                  4400 Forbes Avenue
+                </span>
+              </span>
+              <br />
+              <span itemprop="addressLocality">Pittsburgh</span>,
+              <span itemprop="addressRegion">PA</span>
+              <span itemprop="postalCode">15213</span>
+              <br />
+              <span itemprop="telephone">(412) 622-3131</span>
+            </p>
+            <p><small>One of the four <a href="http://www.carnegiemuseums.org/">Carnegie Museums of Pittsburgh</a></small></p>
+          </section>
+          <section class="navigation">
+            <ul id="menu-footer-menu" class="nav-footer">
+              <li id="menu-item-171" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-171"><a href="http://cmoa.org/art/">Art</a></li>
+              <li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-172"><a href="http://cmoa.org/visit/">Visit</a></li>
+              <li id="menu-item-170" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170"><a href="http://cmoa.org/programs/">Programs</a></li>
+              <li id="menu-item-169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169"><a href="http://cmoa.org/join-give/">Join &amp; Give</a></li>
+              <li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173"><a href="http://cmoa.org/calendar/">Calendar</a></li>
+              <li id="menu-item-360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a href="http://cmoa.org/about/">About</a></li>
+              <li id="menu-item-178" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-178"><a href="/about/private-events/">Private Events</a></li>
+              <li id="menu-item-315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-315"><a href="http://cmoa.org/visit/visitor-policies/">Visitor Policies</a></li>
+              <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="http://cmoa.org/visit/accessibility/">Accessibility</a></li>
+              <li id="menu-item-177" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-177"><a href="http://www.carnegiemuseums.org/interior.php?pageID=11">Careers</a></li>
+              <li id="menu-item-179" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-179"><a href="http://press.cmoa.org">Press</a></li>
+            </ul>
+          </section>
 
-                        <section class="location">
-                          <p>
-                      <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                        <span itemprop="streetAddress">
-                          4400 Forbes Avenue
-                        </span>
-                      </span>
-                      <br />
-                      <span itemprop="addressLocality">Pittsburgh</span>,
-                      <span itemprop="addressRegion">PA</span>
-                      <span itemprop="postalCode">15213</span>
-                      <br />
-                      <span itemprop="telephone">(412) 622-3131</span>
-
-                  </p>
-                          <p><small>One of the four <a href="http://www.carnegiemuseums.org/">Carnegie Museums of Pittsburgh</a></small></p>
-                        </section>
-
-                        <section class="navigation">
-                          <ul id="menu-footer-menu" class="nav-footer"><li id="menu-item-171" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-171"><a href="http://cmoa.org/art/">Art</a></li>
-                  <li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-172"><a href="http://cmoa.org/visit/">Visit</a></li>
-                  <li id="menu-item-170" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170"><a href="http://cmoa.org/programs/">Programs</a></li>
-                  <li id="menu-item-169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169"><a href="http://cmoa.org/join-give/">Join &amp; Give</a></li>
-                  <li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173"><a href="http://cmoa.org/calendar/">Calendar</a></li>
-                  <li id="menu-item-360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a href="http://cmoa.org/about/">About</a></li>
-                  <li id="menu-item-178" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-178"><a href="/about/private-events/">Private Events</a></li>
-                  <li id="menu-item-315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-315"><a href="http://cmoa.org/visit/visitor-policies/">Visitor Policies</a></li>
-                  <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="http://cmoa.org/visit/accessibility/">Accessibility</a></li>
-                  <li id="menu-item-177" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-177"><a href="http://www.carnegiemuseums.org/interior.php?pageID=11">Careers</a></li>
-                  <li id="menu-item-179" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-179"><a href="http://press.cmoa.org">Press</a></li>
-                  </ul>      </section>
-
-                        <section class="social">
-                          <ul class="links">
-                            <li>
-                              <a href="http://www.facebook.com/CarnegieMuseumofArt" aria-label="facebook" title="Facebook"><i class="icon -facebook" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                              <a href="http://twitter.com/cmoa" aria-label="twitter" title="Twitter"><i class="icon -twitter" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                              <a href="http://instagram.com/thecmoa" aria-label="instagram" title="Instagram"><i class="icon -instagram" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                              <a href="http://vimeo.com/cmoa" aria-label="vimeo" title="Vimeo"><i class="icon -vimeo" aria-hidden="true"></i></a>
-                            </li>
-                          </ul>
-                          <p>
-                            <a href="https://itunes.apple.com/us/app/carnegie-museum-of-art/id700992890?mt=8" title="Download our app on the App Store" aria-label="Download our app on the App Store"><?xml version="1.0" encoding="utf-8"?>
-                  <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                  <svg version="1.1" id="US_UK_Download_on_the" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                  	 x="0px" y="0px" width="152px" height="45px" viewBox="0 0 135 40" enable-background="new 0 0 135 40" xml:space="preserve">
+          <section class="social">
+            <ul class="links">
+              <li>
+                <a href="http://www.facebook.com/CarnegieMuseumofArt" aria-label="facebook" title="Facebook"><i class="icon -facebook" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="http://twitter.com/cmoa" aria-label="twitter" title="Twitter"><i class="icon -twitter" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="http://instagram.com/thecmoa" aria-label="instagram" title="Instagram"><i class="icon -instagram" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="http://vimeo.com/cmoa" aria-label="vimeo" title="Vimeo"><i class="icon -vimeo" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+            <p>
+              <a href="https://itunes.apple.com/us/app/carnegie-museum-of-art/id700992890?mt=8" title="Download our app on the App Store" aria-label="Download our app on the App Store">
+                <?xml version="1.0" encoding="utf-8"?>
+                <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg version="1.1" id="US_UK_Download_on_the" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="152px" height="45px" viewBox="0 0 135 40" enable-background="new 0 0 135 40" xml:space="preserve">
                   <g>
                   	<path fill="#A6A6A6" d="M130.197,40H4.729C2.122,40,0,37.872,0,35.267V4.726C0,2.12,2.122,0,4.729,0h125.468
                   		C132.803,0,135,2.12,135,4.726v30.541C135,37.872,132.803,40,130.197,40L130.197,40z"/>
@@ -430,57 +435,53 @@
                   	</g>
                   </g>
                   </svg>
-                  </a>
-                </p>
-                        </section>
-                      </div>
-                </div>
-                <p class="legal">
-                  <small>&copy; 2017 Carnegie Museum of Art, Carnegie Institute &#8226;<a href="/about/terms-of-use/">Terms of Use</a>&#8226;<a href="http://www.carnegiemuseums.org/interior.php?pageID=100">Privacy Policy</a></small>
-                </p>
-            </footer>
+              </a>
+            </p>
+          </section>
         </div>
-
-        <script type="text/javascript">
-            (function(i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function() {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-            ga('create', 'UA-1213892-1', 'auto');
-            ga('send', 'pageview');
-
-            ga('create', 'UA-65401320-1', 'auto', {
-                'name': 'unified'
-            });
-            ga('unified.send', 'pageview');
-        </script>
-
-        <script type="text/javascript">
-            /* <![CDATA[ */
-            var google_conversion_id = 975549556;
-            var google_custom_params = window.google_tag_params;
-            var google_remarketing_only = true;
-            /* ]]> */
-        </script>
-        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-        </script>
-        <noscript>
+    </div>
+    <p class="legal">
+      <small>&copy; 2017 Carnegie Museum of Art, Carnegie Institute &#8226;<a href="/about/terms-of-use/">Terms of Use</a>&#8226;<a href="http://www.carnegiemuseums.org/interior.php?pageID=100">Privacy Policy</a></small>
+    </p>
+    </footer>
+    </div>
+    <script type="text/javascript">
+      (function(i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function() {
+            (i[r].q = i[r].q || []).push(arguments);
+          }), (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
+      ga("create", "UA-1213892-1", "auto");
+      ga("send", "pageview");
+      ga("create", "UA-65401320-1", "auto", {
+        name: "unified"
+      });
+      ga("unified.send", "pageview");
+    </script>
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 975549556;
+      var google_custom_params = window.google_tag_params;
+      var google_remarketing_only = true;
+      /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
   <div style="display:inline;">
     <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/975549556/?value=0&guid=ON&script=0"/>
   </div>
 </noscript>
-        <!-- Site Defined Footer End -->
+    <!-- Site Defined Footer End -->
     <script type="text/javascript" src="http://localhost:3000/dist/scripts/common.js"></script>
     <script type="text/javascript" src="http://localhost:3000/dist/scripts/cmoa.js"></script>
-    </footer>
+  </footer>
 </body>
-
 </html>
