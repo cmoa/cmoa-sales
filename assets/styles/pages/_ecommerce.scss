@@ -7,19 +7,11 @@
   display: none;
 }
 
-input {
-  max-width:20%;
-
-  @include media($medium) {
-    max-width:50%;
-  }
-}
 
 td {
   @include media($medium) {
     font-size: .8em;
   }
-
   button {
     @include media($medium) {
       font-size: .8em;

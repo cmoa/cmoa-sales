@@ -19,30 +19,28 @@ legend {
 }
 
 
-form input + label {
+form label {
   display: block;
-  position: absolute;
   width: 100%;
   font-weight: 100;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
   color: $red;
-  margin: 0;
+  margin-left: 5px;
   padding: 0;
   z-index: 2;
-  transform: translateY(-2.5em);
   transition: all .3s;
   user-select: none;
 }
 
 
-form input.has-value + label {
-  opacity: 0;
-}
-
-form input:focus + label {
-  opacity: 0;
-}
+// form input.has-value + label {
+//   opacity: 0;
+// }
+//
+// form input:focus + label {
+//   opacity: 0;
+// }
 
 
 input,
@@ -64,8 +62,10 @@ select[multiple] {
   margin-bottom: $small-spacing;
   padding: $base-spacing / 4;
   transition: box-shadow .2s;
-  width: 100%;
-
+  width: 50%;
+  @include media($small) {
+    width: 100%
+  }
   &:hover {
   box-shadow: 0 0 0 1px $red;
   }
