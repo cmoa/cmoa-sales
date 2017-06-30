@@ -11,7 +11,6 @@
  * ======================================================================== */
 
 require('../../array_polyfill');
-
 (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
