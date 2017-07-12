@@ -5,11 +5,11 @@ Frontend tooling and HTML/CSS/JS for CMOA sales pages and sales widget
 
 This project requires node and gulp.
 
-[node](https://nodejs.org/en/download/package-manager/) is available on most platforms and can also be managed with tools like [nvm](https://github.com/creationix/nvm)
+[node](https://nodejs.org/en/download/package-manager/) is available on most platforms and can also be managed with tools like [nvm](https://github.com/creationix/nvm).
 
 If gulp is not installed, run `npm install -g gulp-cli`
 
-Run `npm install` to install project-specific dependencies
+Finally, run `npm install` to install project-specific dependencies.
 
 ## Development
 
