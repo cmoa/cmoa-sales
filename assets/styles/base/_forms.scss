@@ -127,13 +127,8 @@ select {
 // ----- Radio buttons -----
 
 .add-membership {
-  p {
-    position: relative;
-  }
   label {
-    text-align: left;
-    position: absolute;
-    top: 0;
-    left: 10px;
+    display: inline;
+    cursor: pointer;
   }
 }

@@ -1,6 +1,4 @@
 require('waypoints/lib/jquery.waypoints');
-var moment = require('moment');
-var store = require('store2');
 
 var SiteNavigation = (function($) {
 
@@ -35,61 +33,6 @@ var SiteNavigation = (function($) {
     ga('send', 'event', quickviewTarget, 'open', 'navigation');
     ga('unified.send', 'event', quickviewTarget, 'open', 'navigation');
 
-  }
-
-  // tabs navigation
-  ////////////////////////////////////////////////////////////////////////////////
-  var tabs = $('.tabs');
-  var tabLinks = $('.tabs--links');
-  var tabOverflow = $('.tabs--overflow');
-  var tabOverflowLinks = $('.tabs--dropdown');
-
-  var numOfItems = 0;
-  var totalSpace = 0;
-  var breakWidths = [];
-
-  // Get initial state
-  tabLinks.children().outerWidth(function(i,w) {
-    totalSpace += w;
-    numOfItems += 1;
-    breakWidths.push(totalSpace);
-  });
-
-  var availableSpace, numOfVisibleItems, requiredSpace;
-
-  function checkTabs() {
-    // Get instant state
-    availableSpace = tabs.width() - 75;
-    numOfVisibleItems = tabLinks.children().length;
-    requiredSpace = breakWidths[numOfVisibleItems -1];
-
-    // There is not enought space
-    if (requiredSpace > availableSpace) {
-      tabLinks.children().last().prependTo(tabOverflowLinks);
-      numOfVisibleItems -= 1;
-      checkTabs();
-      // There is more than enough space
-    } else if (availableSpace > breakWidths[numOfVisibleItems]) {
-      tabOverflowLinks.children().first().appendTo(tabLinks);
-      numOfVisibleItems += 1;
-    }
-    // Update the button accordingly
-    tabOverflow.attr('count', numOfItems - numOfVisibleItems);
-    if (numOfVisibleItems === numOfItems) {
-      tabOverflow.removeClass('is-active');
-    } else tabOverflow.addClass('is-active');
-
-    // accessibility
-    $(".tabs a").attr("role", "tab");
-    $(".tabs a").attr("aria-selected", "false" );
-    $(".tabs .current-menu-item a").attr("aria-selected", "true" );
-  }
-
-  function formatHours(data) {
-    var today = moment().format('dddd');
-    var day = data.days.find(d => d.day == today);
-    var text = !!day.opens ? `<p class="times">Open Today: <span class="hours"><time itemprop="opens" content="${day.opens_ISO}">${day.opens}</time>-<time itemprop="closes" content="${day.closes_ISO}" >${day.closes}</time></span></p>` : '<p class="times">Closed Today</p>';
-    $('.open-times').html(text);
   }
 
   return {
@@ -127,16 +70,6 @@ var SiteNavigation = (function($) {
         menuBtn.toggleClass('is-active');
       });
 
-
-      if ( $('.tabs').length ) {
-        // Window listeners
-        $(window).resize(function() {
-          checkTabs();
-        });
-
-        checkTabs();
-      }
-
       // scroll functions
       ////////////////////////////////////////////////////////////////////////////////
       var headerHeight = $('.header-main').outerHeight();
@@ -169,20 +102,6 @@ var SiteNavigation = (function($) {
         },
         offset: '-250px'
       })
-    },
-
-    // get today's hours
-    getHours: function() {
-      var cmoa_data = store.namespace('cmoa_data');
-      if(store.session.has('cmoa_data.hours')) {
-        formatHours(store.session('cmoa_data.hours'))
-      }
-      else {
-        $.get('/wp-json/data/v1/hours').then(data => {
-          cmoa_data.session('hours', data);
-          formatHours(data);
-        });
-      }
     }
   }
 
