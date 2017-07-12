@@ -1,62 +1,42 @@
 #body {
   @extend .container;
   padding-top: $large-spacing;
+  margin-bottom: $medium-spacing;
+
+  td {
+    @include media($medium) {
+      font-size: .8em;
+    }
+    button {
+      @include media($medium) {
+        font-size: .8em;
+      }
+    }
+  }
+
+  button {
+    @extend .btn;
+    margin-bottom: $small-spacing;
+  }
+
+  .apply-special > label {
+    text-transform: capitalize;
+  }
+
+  .cart-table,
+  .apply-special,
+  .member-login,
+  .member-benefits {
+    margin-bottom: $base-spacing;
+  }
 }
 
 #back {
   display: none;
 }
 
-input {
-  max-width:20%;
-
-  @include media($medium) {
-    max-width:50%;
-  }
-}
-
-td {
-  @include media($medium) {
-    font-size: .8em;
-  }
-
-  button {
-    @include media($medium) {
-      font-size: .8em;
-    }
-  }
-}
-
-button {
-  @extend .btn;
-  margin-bottom: $small-spacing;
-}
-
-.apply-special > label {
-  text-transform: capitalize;
-}
-
-.add-membership {
-
-  label {
-    text-align: left;
-    position: relative;
-    top:1em;
-    left:1.5em;
-  }
-
-  p {
-    height:1em;
-  }
-}
-
-.cart-table,
-.apply-special,
-.member-login,
-.member-benefits {
-  margin-bottom: $base-spacing;
-}
-
-p.legal {
-  text-align:center;
+.contact-information,
+.membership-information,
+.billing-address {
+  margin-bottom: $medium-spacing;
 }

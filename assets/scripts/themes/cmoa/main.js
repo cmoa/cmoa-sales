@@ -11,7 +11,7 @@
  * ======================================================================== */
 
 require('../../array_polyfill');
-
+import SiteNavigation from '../../navigation'
 (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
@@ -21,6 +21,7 @@ require('../../array_polyfill');
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        SiteNavigation.init();
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
