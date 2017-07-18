@@ -7,7 +7,7 @@ This project requires node and gulp.
 
 [node](https://nodejs.org/en/download/package-manager/) is available on most platforms and can also be managed with tools like [nvm](https://github.com/creationix/nvm).
 
-If gulp is not installed, run `npm install -g gulp-cli`
+If the gulp command-line utility has not been installed globally on your machine, run `npm install -g gulp-cli`
 
 Finally, run `npm install` to install project-specific dependencies.
 
