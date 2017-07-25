@@ -17,6 +17,9 @@
   button {
     @extend .btn;
     margin-bottom: $small-spacing;
+    background-color: $medium-dark-gray;
+    font-size: 0.875em;
+    font-weight: 600;
   }
 
   .apply-special > label {
@@ -27,7 +30,109 @@
   .apply-special,
   .member-login,
   .member-benefits {
-    margin-bottom: $base-spacing;
+    padding-bottom: $base-spacing;
+  }
+
+  .cart-forms {
+    form {
+      @include display(flex);
+      @include flex-wrap(wrap);
+      background-color: $light-gray;
+    }
+    h2, h3 {
+      font-size: 1.375em;
+    }
+  }
+
+  .apply-special,
+  .member-login {
+    @include flex-basis(100%);
+    background-color: #fff;
+  }
+
+  .member-benefits {
+    @include flex-basis(50%);
+    padding: $base-spacing;
+    border: 1px solid $medium-gray;
+    border-right: none;
+    li {
+      margin-bottom: $small-spacing;
+      line-height: 1.25;
+    }
+  }
+
+  .add-membership {
+    @include flex-grow(2);
+    padding: $base-spacing;
+    padding-left: $extra-large-spacing;
+    border: 1px solid $medium-gray;
+    border-left: none;
+    @include omega;
+  }
+
+  .guest-checkout {
+    @include flex-basis(100%);
+    padding-top: $base-spacing;
+    background-color: #fff;
+    text-align: right;
+  }
+
+  .guest-checkout,
+  .checkout-buttons {
+    button {
+      font-size: 1em;
+      background: $red;
+      &:hover {
+        background-color: $dark-gray;
+      }
+    }
+  }
+
+  .cart-table {
+    th {
+      padding: 0 $base-spacing;
+      font-weight: normal;
+      border-bottom-color: $medium-gray;
+    }
+  }
+
+  .cart-row {
+    background-color: $light-gray;
+    td {
+      padding: $base-spacing;
+      font-weight: bold;
+
+      &:first-child {
+        border-left: 1px solid $medium-gray;
+      }
+
+      &:last-child {
+        border-right: 1px solid $medium-gray;
+      }
+    }
+  }
+
+  .cart-name,
+  .cart-options,
+  .cart-price {
+    font-size: 1.1em;
+  }
+
+  .cart-qty form {
+    @include display(flex);
+    .btn {
+      margin-left: 0.5em;
+    }
+  }
+
+  tr.cart-total td {
+    padding: $base-spacing;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: right;
+    &.cart-total {
+      text-align: left;
+    }
   }
 }
 
