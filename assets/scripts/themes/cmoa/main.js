@@ -11,7 +11,9 @@
  * ======================================================================== */
 
 require('../../array_polyfill');
-import SiteNavigation from '../../navigation'
+import SiteNavigation from '../../navigation';
+import { addPlaceholders } from 'ecomm';
+
 (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
@@ -22,6 +24,7 @@ import SiteNavigation from '../../navigation'
       init: function() {
         // JavaScript to be fired on all pages
         SiteNavigation.init();
+        addPlaceholders();
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

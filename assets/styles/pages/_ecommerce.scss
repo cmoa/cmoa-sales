@@ -3,6 +3,10 @@
   padding-top: $large-spacing;
   margin-bottom: $medium-spacing;
 
+  #{$all-text-inputs} {
+    border: 1px solid $medium-gray;
+  }
+
   td {
     @include media($medium) {
       font-size: .8em;
@@ -22,15 +26,31 @@
     font-weight: 600;
   }
 
+  form label {
+    color: $dark-gray;
+    text-transform: none;
+  }
+
   .apply-special > label {
     text-transform: capitalize;
   }
 
-  .cart-table,
-  .apply-special,
-  .member-login,
   .member-benefits {
     padding-bottom: $base-spacing;
+  }
+
+  .apply-special,
+  .cart-table {
+    padding-bottom: $small-spacing;
+  }
+
+  .member-login {
+    padding-bottom: $medium-spacing;
+  }
+
+  .member-savings {
+    font-style: italic;
+    text-align: right;
   }
 
   .cart-forms {
@@ -46,8 +66,23 @@
 
   .apply-special,
   .member-login {
+    @include display(flex);
     @include flex-basis(100%);
     background-color: #fff;
+
+    h2 {
+      @include flex-basis(15%);
+      font-size: 1.25em;
+      line-height: 1.75;
+    }
+
+    label {
+      display: none;
+    }
+
+    button {
+      margin-left: $small-spacing;
+    }
   }
 
   .member-benefits {
@@ -134,6 +169,13 @@
       text-align: left;
     }
   }
+
+  .cc-exp {
+    margin-bottom: $base-spacing;
+    select {
+      margin-bottom: $small-spacing;
+    }
+  }
 }
 
 #back {
@@ -145,3 +187,4 @@
 .billing-address {
   margin-bottom: $medium-spacing;
 }
+
