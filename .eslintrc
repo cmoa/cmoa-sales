@@ -1,0 +1,27 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true,
+      "objectLiteralShorthandProperties": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "rules": {
+    "camelcase": "off",
+    "new-cap": "off",
+    "semi": "error",
+    "quotes": ["warn", "single", "avoid-escape"],
+    "comma-dangle": ["warn", "never"],
+    "no-var": "warn",
+    "eqeqeq": ["warn", "smart"],
+    "no-eval": "error",
+    "indent": ["error", 2],
+    "no-trailing-spaces": "warn",
+    "no-multiple-empty-lines": ["warn", { "max": 1 }],
+    "space-before-blocks": "error",
+    "space-before-function-paren": ["warn", "never"],
+    "jsx-quotes": ["warn", "prefer-double"]
+  }
+}
