@@ -1,3 +1,19 @@
+%light-btn {
+  @extend .btn;
+  padding-top: calc(0.95em - 2px);
+  padding-bottom: calc(0.75em - 2px);
+  background-color: #fff;
+  color: $red !important;
+  font-size: 0.875em;
+  font-weight: 600;
+  border: 2px solid $red;
+
+  &:hover, &.active {
+    background-color: $red;
+    color: #fff !important;
+  }
+}
+
 #body {
   @extend .container;
   padding-top: 5.25rem;
@@ -113,6 +129,7 @@
     }
 
     button {
+      @extend %light-btn;
       margin-left: $small-spacing;
 
       @include media($extra-small) {
@@ -160,6 +177,7 @@
     }
 
     button {
+      @extend %light-btn;
       @include media($extra-small) {
         width: 100%;
       }
@@ -170,7 +188,7 @@
     @include flex-basis(100%);
     padding-top: $base-spacing;
     background-color: #fff;
-    text-align: right;
+    text-align: center;
   }
 
   .guest-checkout,
@@ -202,6 +220,10 @@
       padding: 0 $base-spacing;
       font-weight: normal;
       border-bottom-color: $medium-gray;
+    }
+
+    button {
+      @extend %light-btn;
     }
   }
 
