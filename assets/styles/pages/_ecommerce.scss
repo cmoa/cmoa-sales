@@ -1,7 +1,11 @@
 #body {
   @extend .container;
-  padding-top: $large-spacing;
+  padding-top: 5.25rem;
   margin-bottom: $medium-spacing;
+
+  @include media($small) {
+    padding-top: $base-spacing;
+  }
 
   #{$all-text-inputs} {
     border: 1px solid $medium-gray;
@@ -66,8 +70,7 @@
 
   .apply-special,
   .member-login {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 40%;
+    @include display(flex);
     @include flex-basis(100%);
     background-color: #fff;
 
@@ -84,17 +87,17 @@
     }
 
     @include media($extra-small) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+      @include flex-wrap(wrap);
     }
 
     h2 {
+      margin-right: 0.5em;
       font-size: 1.25em;
       line-height: 1.75;
+      @include flex-basis(180px);
 
       @include media($extra-small) {
-        grid-column-start: span 2;
-        grid-row-start: span 2;
+        @include flex-basis(100%);
         margin-bottom: 0;
       }
     }
@@ -103,8 +106,18 @@
       display: none;
     }
 
+    input[type="text"] {
+      @include media($extra-small) {
+        flex-grow: 2;
+      }
+    }
+
     button {
       margin-left: $small-spacing;
+
+      @include media($extra-small) {
+        flex-grow: 2;
+      }
     }
   }
 
@@ -145,6 +158,12 @@
       padding-top: 0;
       border: none;
     }
+
+    button {
+      @include media($extra-small) {
+        width: 100%;
+      }
+    }
   }
 
   .guest-checkout {
@@ -159,13 +178,26 @@
     button {
       font-size: 1em;
       background: $red;
+
       &:hover {
         background-color: $dark-gray;
+      }
+
+      @include media($extra-small) {
+        width: 100%;
       }
     }
   }
 
   .cart-table {
+    margin-top: $medium-spacing;
+
+    table.cart {
+      @include media($small) {
+        border-top: 1px solid $medium-gray;
+      }
+    }
+
     th {
       padding: 0 $base-spacing;
       font-weight: normal;
@@ -206,9 +238,6 @@
       @include media($small) {
         padding-bottom: 0;
         border: none;
-        &:first-child, &:last-child {
-          border: none;
-        }
       }
     }
   }
@@ -236,12 +265,14 @@
   td.cart-name, td.cart-qty {
     @include media($small) {
       grid-column-start: span 3;
+      border-left: 1px solid $medium-gray;
     }
   }
 
   td.cart-options, td.cart-price {
     @include media($small) {
       grid-column-start: span 1;
+      border-right: 1px solid $medium-gray;
     }
   }
 
