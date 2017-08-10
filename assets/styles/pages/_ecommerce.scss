@@ -28,6 +28,8 @@
   }
 
   td {
+    border-bottom: 1px solid $medium-gray;
+
     @include media($medium) {
       font-size: .8em;
     }
@@ -186,7 +188,7 @@
 
   .guest-checkout {
     @include flex-basis(100%);
-    padding-top: $base-spacing;
+    padding-top: $medium-spacing;
     background-color: #fff;
     text-align: center;
   }
@@ -242,7 +244,7 @@
     background-color: $light-gray;
 
     @include media($small) {
-      border-bottom: 1px solid $light-medium-gray;
+      border-bottom: 1px solid $medium-gray;
     }
 
     td {
