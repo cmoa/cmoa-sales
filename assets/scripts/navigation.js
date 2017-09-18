@@ -74,34 +74,36 @@ var SiteNavigation = (function($) {
       ////////////////////////////////////////////////////////////////////////////////
       var headerHeight = $('.header-main').outerHeight();
 
-      var fixNav = new Waypoint({
-        element: $('.nav-container'),
-        handler: function(direction) {
-          if (direction == 'down' && quickviewState == false){
-            $('.header-main').addClass('is-fixed');
-            $('.quickview-container + *').css({'padding-top':headerHeight});
-          }
-          else {
-            $('.header-main').removeClass('is-fixed');
-            $('.quickview-container + *').css({'padding-top':'0'});
+      if($('.nav-container').length) {
+        var fixNav = new Waypoint({
+          element: $('.nav-container'),
+          handler: function(direction) {
+            if (direction == 'down' && quickviewState == false){
+              $('.header-main').addClass('is-fixed');
+              $('.quickview-container + *').css({'padding-top':headerHeight});
+            }
+            else {
+              $('.header-main').removeClass('is-fixed');
+              $('.quickview-container + *').css({'padding-top':'0'});
 
-          }
-        },
-        offset: '-220px'
-      })
+            }
+          },
+          offset: '-220px'
+        })
 
-      var animateNav = new Waypoint({
-        element: $('.nav-container'),
-        handler: function(direction) {
-          if (direction == 'up'){
-            $('.header-main').removeClass('is-visible');
-          }
-          else {
-            $('.header-main').addClass('is-visible');
-          }
-        },
-        offset: '-250px'
-      })
+        var animateNav = new Waypoint({
+          element: $('.nav-container'),
+          handler: function(direction) {
+            if (direction == 'up'){
+              $('.header-main').removeClass('is-visible');
+            }
+            else {
+              $('.header-main').addClass('is-visible');
+            }
+          },
+          offset: '-250px'
+        })
+      }
     }
   }
 
