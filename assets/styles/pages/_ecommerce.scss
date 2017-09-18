@@ -305,6 +305,10 @@
       padding-top: $small-spacing;
       padding-bottom: $small-spacing;
     }
+
+    @include media($really-small) {
+      grid-column-start: span 4;
+    }
   }
 
   td.cart-qty {
@@ -313,6 +317,18 @@
     &:before {
       content: "Qty:";
       margin-right: 5px;
+    }
+
+    @include media($really-small) {
+      padding-bottom: 0;
+      border-right: 1px solid $medium-gray;
+    }
+  }
+
+  td.cart-price {
+    @include media($really-small) {
+      text-align: right;
+      border-left: 1px solid $medium-gray;
     }
   }
 
