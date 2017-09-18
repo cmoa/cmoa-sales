@@ -19,6 +19,8 @@ $medium: new-breakpoint(max-width 1000px 12);
 $small: new-breakpoint(max-width 700px 6);
 // iphone portrait:
 $extra-small: new-breakpoint(max-width 450px 6);
+// really-small:
+$really-small: new-breakpoint(max-width 374px 6);
 
 $nav-break: new-breakpoint(max-width 890px 12);
 $nav-break2: new-breakpoint(max-width 520px 12);
