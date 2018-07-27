@@ -108,7 +108,7 @@
       @include flex-wrap(wrap);
     }
 
-    h2 {
+    label {
       margin-right: 0.5em;
       font-size: 1.25em;
       line-height: 1.75;
@@ -118,10 +118,6 @@
         @include flex-basis(100%);
         margin-bottom: 0;
       }
-    }
-
-    label {
-      display: none;
     }
 
     input[type="text"] {
