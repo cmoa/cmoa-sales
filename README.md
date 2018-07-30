@@ -1,5 +1,16 @@
-# cmoa-sales
+# CMOA Sales
+
 Frontend tooling and HTML/CSS/JS for CMOA sales pages and sales widget
+
+## Overview
+
+The `cart.html`, `cart-promo.html`, and `checkout.html` pages approximate the shopping cart production environment and are to be used to test CSS and JS, whereas the CMS site templates for the header and footer are the *actual code snippets* to be **copied** to the [CMP Sales CMS](https://sales.carnegiemuseums.org/manage/).
+
+Any updates or changes made here need to be recompiled, and the files in `dist/` should be moved to the sales production webserver.
+
+_Note, don’t forget to ammend the `CSS` and `JS` links in the **Header** and **Footer** with the cache-busting content hash!_.
+
+---
 
 ## Setup
 
