@@ -23,7 +23,8 @@
       "src": "styles",
       "dest": "styles",
       "autoprefixer": {
-        "browsers": ["last 3 version"]
+        "browsers": ["last 3 versions", "ie 10", "ie 11"],
+        "grid": true
       },
       "sass": {
         "indentedSyntax": true

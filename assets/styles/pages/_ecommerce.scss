@@ -1,3 +1,6 @@
+$qty-width: 320px;
+$qty-width-md: 280px;
+
 %light-btn {
   @extend .btn;
   padding-top: calc(0.95em - 2px);
@@ -8,7 +11,8 @@
   font-weight: 600;
   border: 2px solid $red;
 
-  &:hover, &.active {
+  &:hover,
+  &.active {
     background-color: $red;
     color: #fff !important;
   }
@@ -31,11 +35,11 @@
     border-bottom: 1px solid $medium-gray;
 
     @include media($medium) {
-      font-size: .8em;
+      font-size: 0.8em;
     }
     button {
       @include media($medium) {
-        font-size: .8em;
+        font-size: 0.8em;
       }
     }
   }
@@ -81,7 +85,8 @@
       @include flex-wrap(wrap);
       background-color: $light-gray;
     }
-    h2, h3 {
+    h2,
+    h3 {
       font-size: 1.375em;
     }
   }
@@ -101,10 +106,6 @@
     }
 
     @include media($small) {
-      grid-template-columns: 2fr 2fr 1fr;
-    }
-
-    @include media($extra-small) {
       @include flex-wrap(wrap);
     }
 
@@ -114,14 +115,14 @@
       line-height: 1.75;
       @include flex-basis(180px);
 
-      @include media($extra-small) {
+      @include media($small) {
         @include flex-basis(100%);
-        margin-bottom: 0;
+        margin: 0;
       }
     }
 
     input[type="text"] {
-      @include media($extra-small) {
+      @include media($small) {
         flex-grow: 2;
       }
     }
@@ -130,8 +131,13 @@
       @extend %light-btn;
       margin-left: $small-spacing;
 
-      @include media($extra-small) {
-        flex-grow: 2;
+      @include media($small) {
+        @include flex-basis(40%);
+      }
+
+      @include media($really-small) {
+        @include flex-basis(100%);
+        margin-left: 0;
       }
     }
   }
@@ -227,7 +233,11 @@
 
   .cart-heading {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr $qty-width 1fr;
+
+    @include media($medium) {
+      grid-template-columns: 1fr 1fr $qty-width-md 1fr;
+    }
 
     @include media($small) {
       display: none;
@@ -236,11 +246,20 @@
 
   .cart-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr $qty-width 1fr;
     background-color: $light-gray;
 
+    @include media($medium) {
+      grid-template-columns: 1fr 1fr $qty-width-md 1fr;
+    }
+
     @include media($small) {
+      grid-template-columns: $qty-width-md/3 $qty-width-md/3 $qty-width-md/3 1fr;
       border-bottom: 1px solid $medium-gray;
+    }
+
+    @include media($extra-small) {
+      grid-template-columns: 1fr 1fr 1fr 2fr;
     }
 
     td {
@@ -260,16 +279,118 @@
         border: none;
       }
     }
+
+    & + tr.cart-subtotal {
+      margin-top: $base-spacing * 3/4;
+    }
+  }
+
+  tr.cart-total,
+  tr.cart-subtotal,
+  tr.promotion-savings {
+    display: grid;
+    grid-template-columns: 2fr 200px #{$qty-width - 200px} 1fr;
+
+    td {
+      padding: $small-spacing/2 $base-spacing;
+      text-align: left;
+      border-bottom: none;
+
+      &:first-child {
+        grid-column-start: 2;
+        grid-column-end: span 2;
+      }
+    }
+
+    @include media($medium) {
+      grid-template-columns: 2fr 170px #{$qty-width-md - 170px} 1fr;
+    }
+
+    @include media($small) {
+      grid-template-columns: $qty-width-md/3 $qty-width-md/3 $qty-width-md/3 1fr;
+
+      td {
+        &:first-child {
+          grid-column-start: 1;
+          grid-column-end: span 3;
+        }
+      }
+    }
+
+    @include media($extra-small) {
+      grid-template-columns: 1fr 1fr 1fr 2fr;
+
+      td {
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  tr.promotion-savings {
+    & + tr.cart-total {
+      margin-top: $base-spacing * 3/4;
+      border-top: 1px solid $medium-gray;
+    }
+
+    td {
+      &:first-child {
+        grid-column-end: span 1;
+      }
+
+      &.promotion-code {
+        grid-column-start: 3;
+        padding-left: 0;
+        padding-right: 0;
+
+        & + td {
+          display: none;
+        }
+      }
+
+      &.promotion-disc-amt {
+        grid-column-start: 4;
+      }
+    }
+
+    @include media($small) {
+      grid-template-columns: $qty-width-md/2 $qty-width-md/2 1fr;
+
+      td {
+        &.promotion-code {
+          grid-column-start: 2;
+          grid-column: 2 / span 1.5;
+        }
+
+        &.promotion-disc-amt {
+          grid-column-start: 3;
+          grid-column: 3 / span 1.5;
+        }
+      }
+    }
+
+    @include media($extra-small) {
+      grid-template-columns: 2fr 1fr 2fr;
+    }
+  }
+
+  tr.cart-subtotal {
+    & + tr.cart-total {
+      margin-top: $base-spacing * 3/4;
+      border-top: 1px solid $medium-gray;
+    }
   }
 
   tr.cart-total {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
     td {
       padding: $base-spacing;
       font-size: 1.5em;
       font-weight: bold;
-      text-align: right;
       &.cart-total {
         text-align: left;
       }
@@ -282,27 +403,30 @@
     font-size: 1.1em;
   }
 
-  td.cart-name, td.cart-qty {
+  td.cart-name,
+  td.cart-qty {
     @include media($small) {
       grid-column-start: span 3;
       border-left: 1px solid $medium-gray;
     }
   }
 
-  td.cart-options, td.cart-price {
+  td.cart-options,
+  td.cart-price {
     @include media($small) {
       grid-column-start: span 1;
       border-right: 1px solid $medium-gray;
     }
   }
 
-  td.cart-qty, td.cart-price {
+  td.cart-qty,
+  td.cart-price {
     @include media($small) {
       padding-top: $small-spacing;
       padding-bottom: $small-spacing;
     }
 
-    @include media($really-small) {
+    @include media($extra-small) {
       grid-column-start: span 4;
     }
   }
@@ -315,16 +439,16 @@
       margin-right: 5px;
     }
 
-    @include media($really-small) {
+    @include media($extra-small) {
       padding-bottom: 0;
       border-right: 1px solid $medium-gray;
     }
   }
 
   td.cart-price {
-    @include media($really-small) {
-      text-align: right;
+    @include media($extra-small) {
       border-left: 1px solid $medium-gray;
+      padding-left: calc(60% + #{$base-spacing});
     }
   }
 
@@ -341,6 +465,10 @@
       margin-bottom: $small-spacing;
     }
   }
+
+  input.product-qty-select {
+    max-width: 50px;
+  }
 }
 
 #back {
@@ -352,4 +480,3 @@
 .billing-address {
   margin-bottom: $medium-spacing;
 }
-
