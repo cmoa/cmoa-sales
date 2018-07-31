@@ -448,7 +448,7 @@ $qty-width-md: 280px;
   td.cart-price {
     @include media($extra-small) {
       border-left: 1px solid $medium-gray;
-      padding-left: calc(60% + #{$small-spacing});
+      padding-left: calc(60% + #{$base-spacing});
     }
   }
 
