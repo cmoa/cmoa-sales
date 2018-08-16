@@ -160,41 +160,96 @@
     <h1>Cart</h1>
     <div class='cart-table'>
 <!-- Start Table -->
-<table class='cart'>
-    <tr class='cart-heading'>
-        <th class='cart-name'>Product</th>
-        <th class='cart-options'>Options</th>
-        <th class='cart-qty'>Qty</th>
-        <th class='cart-price'>Price</th>
+<table class="cart">
+  <tbody>
+    <tr class="cart-heading">
+      <th class="cart-showdate"></th>
+      <th class="cart-name">Product</th>
+      <th class="cart-options">Options</th>
+      <th class="cart-qty">Qty</th>
+      <th class="cart-price">Price</th>
     </tr>
-    <tr class='cart-row product-row'>
-        <td class='cart-name'>21+ Night 8/17</td>
-        <td class='cart-options'>Adult (Advanced)</td>
-        <td class='cart-qty'>
-            <form action='https://sales.carnegiemuseums.org/cart' method="post">
-                <input type="hidden" name="_token" value="MwcsRV8r2RaTX1JPonbIdFwWACjSZ0UgGRh4lpmJ"> <input name='product-qty' class='product-qty-select' aria-label="Change quantity" type="number" min="0" max="955" value="1"> <input type="hidden" name="cart-item" value="154336"> <button class='cart-update product-update-btn' name='update-cart' value='clicked' type='submit'>Update</button> <button class='cart-remove product-remove-btn' name='remove-cart' value='clicked' type='submit'>Remove</button>
-            </form>
-        </td>
-        <td class='cart-price'><span class='currency'>$23.00</span></td>
+
+    <tr class="cart-row product-row">
+      <td class="cart-showdate">
+        08-16-2018
+      </td>
+      <td class="cart-name">
+        Yoga @ CMOA
+      </td>
+      <td class="cart-options">
+        Adult
+      </td>
+      <td class="cart-qty">
+        <form action="https://sales.carnegiemuseums.org/cart" method="POST">
+          <input type="hidden" name="_token" value="G3MkXZowuwBh2uIpcF9tRjTiTKikwYZD6R8QzIQT">
+
+          <input name="product-qty" class="product-qty-select" aria-label="Change quantity" type="number" min="0" max="23" value="1">
+          <input type="hidden" name="cart-item" value="165381">
+          <button class="cart-update product-update-btn" name="update-cart" value="clicked" type="submit">Update</button>
+          <button class="cart-remove product-remove-btn" name="remove-cart" value="clicked" type="submit">Remove</button>
+        </form>
+      </td>
+      <td class="cart-price">
+        <span class="currency">
+          $10.00
+        </span>
+      </td>
     </tr>
+
+    <tr class="cart-row product-row">
+      <td class="cart-showdate">
+        08-16-2018
+      </td>
+      <td class="cart-name">
+        Yoga @ CMOA
+      </td>
+      <td class="cart-options">
+        Student
+      </td>
+      <td class="cart-qty">
+        <form action="https://sales.carnegiemuseums.org/cart" method="POST">
+          <input type="hidden" name="_token" value="G3MkXZowuwBh2uIpcF9tRjTiTKikwYZD6R8QzIQT">
+
+          <input name="product-qty" class="product-qty-select" aria-label="Change quantity" type="number" min="0" max="24" value="2">
+          <input type="hidden" name="cart-item" value="165382">
+          <button class="cart-update product-update-btn" name="update-cart" value="clicked" type="submit">Update</button>
+          <button class="cart-remove product-remove-btn" name="remove-cart" value="clicked" type="submit">Remove</button>
+        </form>
+      </td>
+      <td class="cart-price">
+        <span class="currency">
+          $10.00
+        </span>
+      </td>
+    </tr>
+
     <tr class='cart-subtotal'>
         <td colspan="3">Subtotal</td>
-        <td class='cart-total'><span class='currency'>$23.00</span></td>
+        <td class='cart-total'><span class='currency'>$20.00</span></td>
     </tr>
+
     <tr class='cart-subtotal'>
         <td colspan="3">Transaction Fee</td>
         <td class='cart-total'><span class='currency'>$3.00</span></td>
     </tr>
+
     <tr class='promotion-savings'>
         <td>Promotional Savings</td>
         <td class='promotion-code'>(TESTJG)</td>
         <td></td>
         <td class='promotion-disc-amt discounts'><span class='currency'>-$1.00</span></td>
     </tr>
-    <tr class='cart-total'>
-        <td colspan="3">Total</td>
-        <td class='cart-total'><span class='currency'>$25.00</span></td>
+
+    <tr class="cart-total">
+      <td colspan="4">
+        Total
+      </td>
+      <td class="cart-total">
+        <span class="currency">$22.00</span>
+      </td>
     </tr>
+  </tbody>
 </table>
 <!-- End Table -->
 <ul class='cart-messages'>

@@ -12,7 +12,7 @@
 
 require('../../array_polyfill');
 import SiteNavigation from '../../navigation';
-import { addPlaceholders } from 'ecomm';
+import { addPlaceholders, addCartClass } from '../../ecomm';
 
 (function($) {
 
@@ -25,6 +25,7 @@ import { addPlaceholders } from 'ecomm';
         // JavaScript to be fired on all pages
         SiteNavigation.init();
         addPlaceholders();
+        addCartClass();
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
