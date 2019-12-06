@@ -4,3 +4,11 @@ export function addPlaceholders() {
   $('#special-code').attr('placeholder', 'Enter code');
   $('#member_number').attr('placeholder', 'Member number');
 }
+
+export function addCartClass() {
+  const $dateHeader = $('th.cart-showdate').text('Date');
+  console.log($dateHeader);
+  if ($dateHeader.length) {
+    $('table.cart').addClass('with-date');
+  }
+}
