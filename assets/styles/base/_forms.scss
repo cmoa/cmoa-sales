@@ -112,8 +112,12 @@ textarea {
 
 select {
   margin-bottom: $base-spacing;
-  max-width: 100%;
-  width: auto;
+
+  width: 195px;
+  height: 22px;
+
+  /*max-width: 100%;
+  width: auto;*/
 }
 
 
@@ -131,4 +135,51 @@ select {
     display: inline;
     cursor: pointer;
   }
+}
+
+.billing-address-input {
+  color: red;
+
+  width: 193px;
+
+  -ms-box-sizing:content-box;
+   -moz-box-sizing:content-box;
+   box-sizing:content-box;
+   -webkit-box-sizing:content-box;
+
+  /* for smaller mobile screen sizes */
+  @include media($small) {
+    color: green;
+  }
+
+}
+
+.billing-apartment-input {
+  color: red;
+
+  /* for smaller mobile screen sizes */
+  @include media($small) {
+    color: green;
+  }
+
+}
+
+.billing-city-input {
+  color: red;
+
+  /* for smaller mobile screen sizes */
+  @include media($small) {
+    color: green;
+  }
+
+}
+
+.billing-zip-input {
+  color: red;
+
+  /* for smaller mobile screen sizes */
+  @include media($small) {
+    color: green;
+  }
+
 }

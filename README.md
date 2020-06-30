@@ -10,6 +10,8 @@ Any updates or changes made here need to be recompiled, and the files in `dist/`
 
 _Note, don’t forget to ammend the `CSS` and `JS` links in the **Header** and **Footer** with the cache-busting content hash!_
 
+Go into the html file you want to work in, place ?v=1.2 After .css so it's like this .css?v=1.2 to bust the css cache.
+
 ---
 
 ## Setup
@@ -29,6 +31,3 @@ Run `npm start` to launch a development server with Browsersync. The browser sho
 ## Building
 
 Run `npm run build` to compile files for production. Bundled files will be created in the local `dist/` folder.
-
-
-
