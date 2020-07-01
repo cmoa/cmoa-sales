@@ -138,71 +138,51 @@ select {
 }
 
 .billing-address-input {
-  color: red;
 
-  width: 190px;
+  width: 195px !important;
 
   -ms-box-sizing:content-box;
   -moz-box-sizing:content-box;
   box-sizing:content-box;
   -webkit-box-sizing:content-box;
-
-  /* for smaller mobile screen sizes */
-  @include media($small) {
-    color: green;
-  }
 
 }
 
 .billing-apartment-input {
-  color: red;
+
+  width: 195px !important;
 
   -ms-box-sizing:content-box;
   -moz-box-sizing:content-box;
   box-sizing:content-box;
   -webkit-box-sizing:content-box;
-
-  /* for smaller mobile screen sizes */
-  @include media($small) {
-    color: green;
-  }
 
 }
 
 .billing-city-input {
-  color: red;
+
+  width: 195px !important;
 
   -ms-box-sizing:content-box;
   -moz-box-sizing:content-box;
   box-sizing:content-box;
   -webkit-box-sizing:content-box;
 
-  /* for smaller mobile screen sizes */
-  @include media($small) {
-    color: green;
-  }
-
 }
 
 .billing-zip-input {
-  color: red;
 
   width: 195px !important;
 
+  -ms-box-sizing:content-box;
+  -moz-box-sizing:content-box;
   box-sizing:content-box;
-
-  /* for smaller mobile screen sizes */
-  @include media($small) {
-    color: green;
-
-    width: 195px;
-  }
+  -webkit-box-sizing:content-box;
 
 }
 
 .billing-state-select {
 
-  color: red;
-
   box-sizing:content-box;
+
 }
