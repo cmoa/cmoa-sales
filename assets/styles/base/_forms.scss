@@ -182,3 +182,13 @@ select {
   -webkit-box-sizing:content-box;
 
 }
+
+/* added because some implied css is overwriting this on the ftp server */
+.credit-name-input {
+  width: 50%;
+}
+
+/* added because some implied css is overwriting this on the ftp server */
+.credit-no-input {
+  width: 50%;
+}
