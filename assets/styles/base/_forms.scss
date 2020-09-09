@@ -33,6 +33,10 @@ form label {
   user-select: none;
 }
 
+label[for="mask-policy"]{
+  display: inline;
+}
+
 .contact-information,
 .product-information {
   input[type=tel],
