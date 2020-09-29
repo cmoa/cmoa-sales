@@ -46,6 +46,36 @@
     }
   }
 
+  .logo-location__location {
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.875em;
+
+    @include media($small) {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    @include media($nav-break2) {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    p {
+      margin-bottom: 0;
+
+      @include media($small) {
+        margin-right: $base-spacing;
+      }
+
+      @include media($extra-small) {
+        margin-right: 0;
+      }
+    }
+  }
+
   .navigation {
     @include span-columns(5);
     @include media($medium) {
