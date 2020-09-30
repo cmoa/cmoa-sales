@@ -23,6 +23,50 @@
     }
   }
 
+  .newsletter-form {
+    @include media($medium) {
+      flex-basis: 40%;
+    }
+
+    .newsletter-form__inner {
+      display: flex;
+      align-items: stretch;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      flex-grow: 2;
+      margin-bottom: 0;
+      padding: 0.675rem 0.5rem;
+      border: 2px solid $light-medium-gray;
+
+      &:hover,
+      &:focus,
+      &:active {
+        box-shadow: none;
+        border: 2px solid $red;
+      }
+    }
+
+    button {
+      padding: 2px 0.5em 0;
+      font-size: 1.5em;
+      background-color: $dark-gray;
+      color: #fff;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $action-color;
+      }
+    }
+  }
+
   .logo {
     @include span-columns(2);
     @include media($medium) {
@@ -106,12 +150,28 @@
     margin-top: $small-spacing;
     text-align: center;
     a {
-      margin-left: 0.5em;
-      &:before {
-        @extend %square-bullet;
-        width: 4px;
-        height: 4px;
-        margin: 0 8px 0 2px;
+      text-decoration: underline;
+    }
+  }
+
+  .legal__copy {
+    @include media($medium) {
+      display: block;
+    }
+  }
+
+  .legal__link {
+    margin-left: $small-spacing;
+    font-weight: bold;
+
+    a {
+      color: #000;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $red;
+        text-decoration: underline;
       }
     }
   }
