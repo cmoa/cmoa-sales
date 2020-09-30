@@ -134,15 +134,17 @@
       a {
         display: block;
         line-height: 0;
-        font-size: 1.25em;
-        background: tint($medium-gray, 33%);
-        color: #fff;
+        font-size: 2em;
+        color: black !important;
+        //background: tint($medium-gray, 33%);
+        //color: #fff;
         padding: 10px;
         margin-right: 4px;
         border-radius: 20px;
         text-align: center;
         &:hover {
-          background: $medium-gray;
+          //background: $medium-gray;
+          color: #B103CA; // cmoa color
         }
         i {
           vertical-align: middle;
