@@ -3,15 +3,14 @@
   margin-bottom: $large-spacing;
   border-top: 1px solid $light-medium-gray;
   overflow: hidden;
+
   @include media($large) {
-    padding-left: $base-spacing;
-    padding-right: $base-spacing;
     margin-bottom: $base-spacing;
   }
 
-  small {
-    display: inline-block;
-    line-height: 1.25em;
+  @include media($small) {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   section {
@@ -23,6 +22,233 @@
     }
   }
 
+  .logo-location {
+    @include span-columns(4);
+    display: flex;
+
+    @include media($large) {
+      @include span-columns(4.5);
+      display: flex;
+    }
+
+    @include media($medium) {
+      @include span-columns(6);
+      display: flex;
+    }
+
+    @include media($small) {
+      @include span-columns(6);
+      display: flex;
+      margin-bottom: $medium-spacing;
+    }
+  }
+
+  .logo-location__logo {
+    flex-basis: 33%;
+    margin-right: $base-spacing;
+    color: #231f20;
+
+    @include media($large) {
+      flex-basis: 40%;
+    }
+
+    @include media($medium) {
+      flex-basis: 33%;
+    }
+
+    @include media($small) {
+      flex-basis: 15%;
+    }
+
+    @include media($nav-break2) {
+      flex-basis: 25%;
+    }
+
+    @include media($extra-small) {
+      flex-basis: 33%;
+    }
+  }
+
+  .logo-location__location {
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.875em;
+
+    @include media($small) {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    @include media($nav-break2) {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    p {
+      margin-bottom: 0;
+
+      @include media($small) {
+        margin-right: $base-spacing;
+      }
+
+      @include media($extra-small) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .footer-nav {
+    @include span-columns(4);
+
+    @include media($medium) {
+      @include span-columns(6);
+      @include omega();
+    }
+
+    @include media($small) {
+      @include span-columns(6);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      column-count: 2;
+
+      @include media($small) {
+        column-count: 3;
+      }
+
+      @include media($extra-small) {
+        column-count: 2;
+      }
+
+      li a {
+        color: #000;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          color: $red;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .footer-social {
+    @include span-columns(3.5);
+    @include shift(0.5);
+
+    @include media($large) {
+      @include shift(0);
+    }
+
+    @include media($medium) {
+      @include span-columns(12);
+      display: flex;
+      justify-content: space-around;
+      margin-top: $medium-spacing;
+    }
+
+    @include media($small) {
+      @include span-columns(5.5);
+      margin-top: $small-spacing;
+    }
+
+    @include media($extra-small) {
+      @include span-columns(6);
+      @include shift(0);
+      margin-top: 0;
+    }
+  }
+
+  .footer-social__links {
+    list-style: none;
+    display: flex;
+    margin: 0.25em 0 1.5em 0;
+    padding: 0;
+
+    @include media($medium) {
+      margin: 0;
+      flex-basis: 40%;
+    }
+
+    @include media($small) {
+      margin: 0.25em 0 1.5em 0;
+    }
+  }
+
+  .footer-social__link {
+    display: inline-block;
+    margin-right: $base-spacing;
+    line-height: 1;
+
+    a {
+      font-size: 2em;
+      color: $dark-gray;
+
+      &:hover,
+      &:focus,
+      &:active {
+        svg {
+          color: $action-color;
+        }
+      }
+    }
+  }
+
+  .newsletter-form {
+    @include media($medium) {
+      flex-basis: 40%;
+    }
+
+    .newsletter-form__inner {
+      display: flex;
+      align-items: stretch;
+    }
+
+    label[for="footer-email-input"] {
+      color: #333 !important;
+      text-transform: none;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      flex-grow: 2;
+      margin-bottom: 0;
+      padding: 0.675rem 0.5rem;
+      border: 2px solid $light-medium-gray;
+
+      &:hover,
+      &:focus,
+      &:active {
+        box-shadow: none;
+        border: 2px solid $red;
+      }
+    }
+
+    button {
+      padding: 2px 0.5em 0;
+      font-size: 1.5em;
+      background-color: $dark-gray;
+      color: #fff;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $action-color;
+      }
+    }
+  }
+
   .logo {
     @include span-columns(2);
     @include media($medium) {
@@ -30,9 +256,6 @@
     }
     @include media($small) {
       @include span-columns(2);
-    }
-    path {
-      fill: $red;
     }
   }
 
@@ -73,15 +296,31 @@
   }
 
   .legal {
-    margin-top: $small-spacing;
+    margin-top: $medium-spacing;
     text-align: center;
     a {
-      margin-left: 0.5em;
-      &:before {
-        @extend %square-bullet;
-        width: 4px;
-        height: 4px;
-        margin: 0 8px 0 2px;
+      text-decoration: underline;
+    }
+  }
+
+  .legal__copy {
+    @include media($medium) {
+      display: block;
+    }
+  }
+
+  .legal__link {
+    margin-left: $small-spacing;
+    font-weight: bold;
+
+    a {
+      color: #000;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $red;
+        text-decoration: underline;
       }
     }
   }
@@ -104,9 +343,9 @@
       a {
         display: block;
         line-height: 0;
-        font-size: 1.25em;
-        background: tint($medium-gray, 33%);
-        color: #fff;
+        font-size: 2em;//1.25em;
+        //background: tint($medium-gray, 33%);
+        color: #333;
         padding: 10px;
         margin-right: 4px;
         border-radius: 20px;
@@ -114,8 +353,17 @@
         &:hover {
           background: $medium-gray;
         }
-        i {
+        i,
+        svg {
+          width: 1em;
+          height: 1em;
           vertical-align: middle;
+        }
+      }
+
+      &:last-child {
+        a {
+          margin-right: 0;
         }
       }
     }
