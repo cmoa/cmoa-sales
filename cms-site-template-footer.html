@@ -1,24 +1,23 @@
 <!-- Site Defined Footer Start -->
-<div class="container-full">
+<!-- Site Defined Footer Start -->
   <footer class="main-footer" id="main-footer" role="contentinfo">
-    <div class="container-full">
+    <div class="container">
       <!-- CMOA footer -->
-      <section class="logo red">
-        <svg role="image" width="100%" height="100%" viewBox="0 0 202 202" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+      <section class="logo-location red">
+        <div class="logo-location__logo">
+         <svg role="image" width="100%" height="100%" viewBox="0 0 202 202" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
                 <title>CMOA Logo</title>
                 <desc>The CMOA Logo</desc>
                 <g>
                   <path  d="M0.171,201.606l94.982,0l0,-94.982l-94.982,0l0,94.982ZM17.078,123.531l61.169,0l0,61.168l-61.169,0l0,-61.168Z" style="fill:#231f20;fill-rule:nonzero;"/><path d="M106.596,106.624l0,16.908l78.075,0l0,20.283l-78.075,0l0,57.791l94.982,0l0,-94.982l-94.982,0ZM123.503,160.72l61.169,0l0,23.979l-61.169,0l0,-23.979Z" style="fill:#231f20;fill-rule:nonzero;"/><path d="M184.343,0.199l-30.256,70.37l-30.257,-70.37l-17.234,0l0,94.982l16.908,0l0,-53.141l22.127,53.141l16.911,0l22.128,-53.141l0,53.141l16.909,0l0,-94.982l-17.236,0Z" style="fill:#231f20;fill-rule:nonzero;"/><path d="M0.171,0.199l0,94.982l94.982,0l0,-33.194l-16.907,0l0,16.287l-61.168,0l0,-61.168l61.168,0l0,16.287l16.907,0l0,-33.194l-94.982,0Z" style="fill:#231f20;fill-rule:nonzero;"/>
               </g>
-              </svg>
-      </section>
-      <section class="location">
+         </svg>
+        </div>
+
         <div class="logo-location__location">
         <p>
           <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-            <span itemprop="streetAddress">
-              4400 Forbes Avenue
-            </span>
+           <span itemprop="streetAddress">4400 Forbes Avenue</span>
           </span>
           <br />
           <span itemprop="addressLocality">Pittsburgh</span>,
@@ -29,8 +28,9 @@
         </p>
         <p>One of the four Carnegie<br />Museums of Pittsburgh.</p>
       </div>
-      </section>
-      <section class="navigation">
+    </section>
+
+      <section class="footer-nav">
         <ul id="menu-footer-menu" class="nav-footer">
           <li id="menu-item-360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a href="http://cmoa.org/about/">About</a></li>
           <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="http://cmoa.org/visit/accessibility/">Accessibility &amp Amenities</a></li>
@@ -40,22 +40,22 @@
         </ul>
       </section>
 
-      <section class="social">
+      <section class="footer-social">
         <div style="margin-bottom:0.35em;">Stay Connected</div>
-        <ul class="links">
-          <li>
+        <ul class="footer-social__links">
+          <li class="footer-social__link">
            <a href="https://www.facebook.com/CarnegieMuseumofArt" aria-label="facebook" title="Facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i><span class="screen-reader-text">Facebook</span></a>
           </li>
-          <li>
+          <li class="footer-social__link">
             <a href="http://twitter.com/cmoa" aria-label="twitter" title="Twitter"><i class="icon -twitter" aria-hidden="true"></i></a>
           </li>
-          <li>
+          <li class="footer-social__link">
             <a href="http://instagram.com/thecmoa" aria-label="instagram" title="Instagram"><i class="icon -instagram" aria-hidden="true"></i></a>
           </li>
-          <li>
+          <li class="footer-social__link">
             <a href="http://vimeo.com/cmoa" aria-label="vimeo" title="Vimeo"><i class="icon -vimeo" aria-hidden="true"></i><span class="screen-reader-text">Vimeo</span></a>
           </li>
-          <li>
+          <li class="footer-social__link">
             <a href="https://youtube.com/cmoapgh/"><i class="fab fa-youtube"></i><span class="screen-reader-text">YouTube</span></a>
           </li>
         </ul>
@@ -72,14 +72,13 @@
       </section>
     </div>
     <p class="legal">
-    <span class="legal__copy">&copy; <?= date('Y') ?> Carnegie Museum of Art, Carnegie Institute</span>
+    <span class="legal__copy">&copy; 2020 Carnegie Museum of Art, Carnegie Institute</span>
     <span class="legal__link"><a href="https://cmoa.org/about/terms-of-use/">Terms of Use</a></span>
     <span class="legal__link"><a href="https://carnegiemuseums.org/privacy-policy/" title="Visit carnegiemuseums.org">Privacy Policy</a></span>
     <span class="legal__link"><a href="https://carnegiemuseums.org/policy-on-non-discrimination-and-non-harassment/" title="Visit carnegiemuseums.org">Non-Discrimination Policy</a></span>
     <span class="legal__link"><a href="https://cmoa.org/contact/">Contact</a></span>
   </p>
   </footer>
-</div>
     <script type="text/javascript">
       (function(i, s, o, g, r, a, m) {
         i["GoogleAnalyticsObject"] = r;
