@@ -28,6 +28,10 @@
       flex-basis: 40%;
     }
 
+    label[for="footer-email-input"] {
+      color: #333;
+    }
+
     .newsletter-form__inner {
       display: flex;
       align-items: stretch;
